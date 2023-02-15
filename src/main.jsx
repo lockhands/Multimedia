@@ -12,7 +12,7 @@ import {
 import Login from './routes/Login';
 import BoletosScanner from './routes/BoletosScaner';
 import ValidateBoletos from './routes/ValidateBoletos';
-
+import HomeWorker from './routes/HomeWorker';
 
 import Dashboard from './routes/Dashboard';
 
@@ -32,6 +32,10 @@ const router = createBrowserRouter([
   {
     path:'/dashboard/validate-boletos/accept',
     element: <ValidateBoletos />
+  },
+  {
+    path:'/dashboard/HomeWorker',
+    element: <HomeWorker />
   }
   
 ]);
