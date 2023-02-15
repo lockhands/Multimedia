@@ -6,6 +6,7 @@ import { styled } from '@mui/material/styles';
 import Typography from '@mui/material/Typography';
 import { red, green, blue } from '@mui/material/colors';
 import { flexbox } from '@mui/system';
+import { useNavigate } from 'react-router-dom';
 
 const Root = styled('div')(({ theme }) => ({
     height: '100%',
@@ -26,7 +27,15 @@ const Superior = styled('div')(({theme}) => ({
     }    
 }))
 
+
+
 function Login() {
+
+    const navigate = useNavigate();
+    const handleClick = () => {
+        navigate('/dashboard/home/cliente');
+    }
+
   return (
     <div
         css={css`
@@ -62,7 +71,7 @@ function Login() {
             <Box mb={2} ></Box>
             <TextField  label="Contraseña" variant="outlined" />
             <Box mb={2} ></Box>
-            <Button variant="contained"> Iniciar Seccion</Button>
+            <Button variant="contained" onClick={handleClick}> Iniciar Seccion</Button>
             
         </Root>
        

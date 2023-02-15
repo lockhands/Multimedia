@@ -15,6 +15,7 @@ import ValidateBoletos from './routes/ValidateBoletos';
 
 
 import Dashboard from './routes/Dashboard';
+import HomeCliente from './routes/Cliente/HomeCliente';
 
 const router = createBrowserRouter([
   {
@@ -32,8 +33,11 @@ const router = createBrowserRouter([
   {
     path:'/dashboard/validate-boletos/accept',
     element: <ValidateBoletos />
-  }
-  
+  },
+  {
+    path:'/dashboard/home/cliente',
+    element:   <HomeCliente />
+  },
 ]);
 
 ReactDOM.createRoot(document.getElementById('root')).render(
