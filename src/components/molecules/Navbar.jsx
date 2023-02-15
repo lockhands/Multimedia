@@ -2,7 +2,6 @@ import { css } from '@emotion/react';
 import { Box } from '@mui/system';
 import React from 'react';
 import { Link } from "react-router-dom";
-
 import LogoNoText from '../../assets/logo-no-text.png'
 import AccountCircleIcon from '@mui/icons-material/AccountCircle';
 
