@@ -10,6 +10,7 @@ import Login from "./routes/Login";
 import BoletosScanner from "./routes/BoletosScaner";
 import ValidateBoletos from "./routes/ValidateBoletos";
 import HomeWorker from "./routes/HomeWorker";
+import OrdersScanner from "./routes/OrdersScanner";
 
 import Dashboard from "./routes/Dashboard";
 import HomeCliente from "./routes/Cliente/HomeCliente";
@@ -30,10 +31,9 @@ const router = createBrowserRouter([
 			{ path: "validate-boletos/accept", element: <ValidateBoletos /> },
 			{ path: "home/cliente", element: <HomeCliente /> },
 			{ path: "HomeWorker", element: <HomeWorker /> },
+      { path: 'OrdersScanner', element: <OrdersScanner/> },
       { path: "pedidos/cliente",element:  <PedidosCliente /> },
       { path: "tickets/cliente", element: <TicketsCliente /> },
-      
-
       
 		],
 	},

@@ -10,4 +10,6 @@
   margin-top: 10px;
   margin-bottom: 10px;
   color: #F5EB9D;
+  grid-template-rows: 70% 30%;
+  gap: 20px;
 }
