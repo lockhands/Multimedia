@@ -27,12 +27,8 @@ function BottomNavbar() {
 				label="Home"
 				icon={<Food style={{ color: "#000000" }} />}
 			/>
-			<BottomNavigationAction
-			 label="Tickets"
-			 icon={<Home stroke="#898989" />} 
-			/>
-			<BottomNavigationAction label="Pedidos"
-			 icon={<Ticket fill="#898989"/>} />
+			<BottomNavigationAction label="Tickets" icon={<Home />} />
+			<BottomNavigationAction label="Pedidos" icon={<Ticket />} />
 		</BottomNavigation>
 		</Paper>
 	);
