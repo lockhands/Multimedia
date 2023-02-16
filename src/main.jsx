@@ -30,17 +30,6 @@ const router = createBrowserRouter([
 			{ path: "HomeWorker", element: <HomeWorker /> },
 		],
 	},
-	{
-		path: "/cliente",
-		element: <MainLayout />,
-		children: [
-			{ path: "", element: <Dashboard /> },
-			{ path: "validate-boletos/scan", element: <BoletosScanner /> },
-			{ path: "validate-boletos/accept", element: <ValidateBoletos /> },
-			{ path: "home/cliente", element: <HomeCliente /> },
-			{ path: "HomeWorker", element: <HomeWorker /> },
-		],
-	},
 ]);
 
 ReactDOM.createRoot(document.getElementById("root")).render(
