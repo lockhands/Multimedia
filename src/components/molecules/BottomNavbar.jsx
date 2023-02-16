@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import { BottomNavigation, BottomNavigationAction, Paper } from "@mui/material";
-import { ReactComponent as Food } from "../../assets/Icons/Food.svg";
-import { ReactComponent as Home } from "../../assets/Icons/Home.svg";
-import { ReactComponent as Ticket } from "../../assets/Icons/Ticket.svg";
+import { ReactComponent as Food } from "../../assets/icons/Food.svg";
+import { ReactComponent as Home } from "../../assets/icons/Home.svg";
+import { ReactComponent as Ticket } from "../../assets/icons/Ticket.svg";
 import { useNavigate } from "react-router-dom";
 
 function BottomNavbar(props) {
