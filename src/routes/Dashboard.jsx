@@ -1,6 +1,7 @@
 import { Box, css } from '@mui/material'
 import React from 'react'
 import { Link } from 'react-router-dom'
+import BottomNavbar from '../components/molecules/BottomNavbar'
 
 import Navbar from '../components/molecules/Navbar'
 
@@ -61,6 +62,7 @@ function Dashboard() {
             </FeatureLink>
           </nav>
         </div>
+        <BottomNavbar></BottomNavbar>
     </div>
   )
 }

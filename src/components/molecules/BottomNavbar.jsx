@@ -25,14 +25,20 @@ function BottomNavbar() {
 		>
 			<BottomNavigationAction
 				label="Home"
-				icon={<Food style={{ color: "#000000" }} />}
+				icon={<Food fill="#898989" />} /* fill solo */
 			/>
+
 			<BottomNavigationAction
-			 label="Tickets"
-			 icon={<Home stroke="#898989" />} 
+				label="Tickets"
+				icon={<Home stroke="#898989" />}
 			/>
-			<BottomNavigationAction label="Pedidos"
-			 icon={<Ticket fill="#898989"/>} />
+			{/* stroke solo */}
+
+			<BottomNavigationAction
+				label="Pedidos"
+				icon={<Ticket fill="#898989" />}
+			/>
+			{/* fill solo */}
 		</BottomNavigation>
 		</Paper>
 	);
