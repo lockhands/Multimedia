@@ -7,6 +7,7 @@ function HomeWorker() {
 
       
   return (
+    
     <div
         css={css`
         display: grid;
@@ -14,9 +15,20 @@ function HomeWorker() {
             align-items:center;
             height:100vh;
             text-align: center;
+            grid-template-rows: 80% 20%;
         `}
     >  
-    <div css={css`
+        <div
+        css={css`
+        display: grid;
+        gap: 20px;
+        place-items: center;
+        text-align: center;
+        width: 100%;
+        max-width: 300px; 
+    `}
+        >
+        <div css={css`
             display: grid;
             place-items: center;
             text-align: center;
@@ -53,13 +65,15 @@ function HomeWorker() {
                 margin-top: 20px;
                 margin-bottom: 20px;
         `}>V-5.432.123</h3>
-        </div>
+        </div >
         <Button  
         variant="contained"> Procesar boletos</Button>
         <Button variant="contained"> Procesar pedidos</Button>
         <Button variant="contained"> Cerrar sesión</Button>
-      <BottomNavbar></BottomNavbar>
+        </div>
+        <BottomNavbar></BottomNavbar>
     </div>
+   
   )
 }
 
