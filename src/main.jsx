@@ -14,6 +14,8 @@ import OrdersScanner from "./routes/OrdersScanner";
 
 import Dashboard from "./routes/Dashboard";
 import HomeCliente from "./routes/Cliente/HomeCliente";
+import PedidosCliente from "./routes/Cliente/PedidosCliente";
+import TicketsCliente from "./routes/Cliente/TicketsCliente";
 
 const router = createBrowserRouter([
 	{
@@ -29,7 +31,15 @@ const router = createBrowserRouter([
 			{ path: "validate-boletos/accept", element: <ValidateBoletos /> },
 			{ path: "home/cliente", element: <HomeCliente /> },
 			{ path: "HomeWorker", element: <HomeWorker /> },
+<<<<<<< HEAD
       { path: 'OrdersScanner', element: <OrdersScanner/> }
+=======
+      { path: "pedidos/cliente",element:  <PedidosCliente /> },
+      { path: "tickets/cliente", element: <TicketsCliente /> },
+      
+
+      
+>>>>>>> 1e2f30716dadd3d0c183ea84100fb0f7db251950
 		],
 	},
 ]);
