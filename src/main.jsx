@@ -16,21 +16,20 @@ import Dashboard from "./routes/Dashboard";
 import HomeCliente from "./routes/Cliente/HomeCliente";
 import PedidosCliente from "./routes/Cliente/PedidosCliente";
 import TicketsCliente from "./routes/Cliente/TicketsCliente";
+import Index from "./routes";
+import LoginCliente from "./routes/Cliente/LoginCliente";
+import LoginTrabajador from "./routes/LoginTrabajador";
 
 const router = createBrowserRouter([
 	{
 		path: "/",
-		element: <Login />,
+		element: <Index/>
 	},
 	{
 		path: "/dashboard",
 		element: <WorkerLayout />,
 		children: [
-			{ path: "", element: <Dashboard /> },
-			{ path: "validate-boletos/scan", element: <BoletosScanner /> },
-			{ path: "validate-boletos/accept", element: <ValidateBoletos /> },
 			{ path: "HomeWorker", element: <HomeWorker /> },
-			{ path: "OrdersScanner", element: <OrdersScanner /> },
 		],
 	},
 	{
@@ -42,6 +41,14 @@ const router = createBrowserRouter([
 			{ path: "tickets", element: <TicketsCliente /> },
 		],
 	},
+  {
+    path:'/login/cliente',
+    element: <LoginCliente />,
+  },
+  {
+    path:'/login/trabajador',
+    element: <LoginTrabajador />,
+  }
 ]);
 
 ReactDOM.createRoot(document.getElementById("root")).render(

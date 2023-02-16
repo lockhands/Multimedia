@@ -1,6 +1,6 @@
 import { css } from '@emotion/react'
 import React from 'react'
-import Logo from '../../components/Logo'
+import Logo from '../components/Logo'
 import { Box , Button, TextField } from '@mui/material';
 import { styled } from '@mui/material/styles';
 import Typography from '@mui/material/Typography';
@@ -30,11 +30,11 @@ const Root = styled('div')(({ theme }) => ({
 
 
 
-function LoginCliente() {
+function LoginTrabajador() {
 
     const navigate = useNavigate();
     const handleClick = () => {
-        navigate('/cliente/home');
+        navigate('/dashboard/HomeWorker');
     }
 
   return (
@@ -81,4 +81,4 @@ function LoginCliente() {
   )
 }
 
-export default LoginCliente
+export default LoginTrabajador
