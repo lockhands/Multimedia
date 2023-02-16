@@ -16,7 +16,7 @@ import Dashboard from "./routes/Dashboard";
 import HomeCliente from "./routes/Cliente/HomeCliente";
 import PedidosCliente from "./routes/Cliente/PedidosCliente";
 import TicketsCliente from "./routes/Cliente/TicketsCliente";
-import Index from "./routes";
+import Index from "./routes/Index";
 import LoginCliente from "./routes/Cliente/LoginCliente";
 import LoginTrabajador from "./routes/LoginTrabajador";
 
