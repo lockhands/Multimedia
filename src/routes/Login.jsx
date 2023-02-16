@@ -34,7 +34,7 @@ function Login() {
 
     const navigate = useNavigate();
     const handleClick = () => {
-        navigate('/dashboard/home/cliente');
+        navigate('/cliente/home');
     }
 
   return (

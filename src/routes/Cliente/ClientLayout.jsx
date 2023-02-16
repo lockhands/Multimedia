@@ -5,7 +5,7 @@ const ClientLayout = () => {
 	return (
 		<>
 			<Outlet />
-			<BottomNavbar home="/cliente" tickets="/cliente/tickets" pedidos="/cliente/pedidos" />
+			<BottomNavbar home="/cliente/home" tickets="/cliente/tickets" pedidos="/cliente/pedidos" />
 		</>
 	);
 };
