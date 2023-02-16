@@ -14,8 +14,7 @@ function PedidosCliente() {
             align-items:center;
             height:100vh;
             text-align: center;
-        `}
-    >  
+        `}>
       <BottomNavbar></BottomNavbar>
     </div>
   )
