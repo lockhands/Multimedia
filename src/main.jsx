@@ -13,6 +13,8 @@ import HomeWorker from "./routes/HomeWorker";
 
 import Dashboard from "./routes/Dashboard";
 import HomeCliente from "./routes/Cliente/HomeCliente";
+import PedidosCliente from "./routes/Cliente/PedidosCliente";
+import TicketsCliente from "./routes/Cliente/TicketsCliente";
 
 const router = createBrowserRouter([
 	{
@@ -28,6 +30,11 @@ const router = createBrowserRouter([
 			{ path: "validate-boletos/accept", element: <ValidateBoletos /> },
 			{ path: "home/cliente", element: <HomeCliente /> },
 			{ path: "HomeWorker", element: <HomeWorker /> },
+      { path: "pedidos/cliente",element:  <PedidosCliente /> },
+      { path: "tickets/cliente", element: <TicketsCliente /> },
+      
+
+      
 		],
 	},
 ]);
