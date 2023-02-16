@@ -6,9 +6,9 @@ import { styled } from '@mui/material/styles';
 import Typography from '@mui/material/Typography';
 import { red, green, blue } from '@mui/material/colors';
 import { flexbox } from '@mui/system';
+import { useNavigate } from 'react-router-dom';
 
 const Root = styled('div')(({ theme }) => ({
-    height: '100%',
     padding: theme.spacing(1),
     [theme.breakpoints.down('md')]: {
        
@@ -16,17 +16,27 @@ const Root = styled('div')(({ theme }) => ({
     flexDirection: 'column',
     alignItems:'center',
     justifyContent:'center',
-
+   
+    },
+    [theme.breakpoints.up('lg')]: {
+        display:'flex',
+    flexDirection: 'column',
+    alignItems:'center',
+    justifyContent:'center',
     },
   }));
 
-const Superior = styled('div')(({theme}) => ({
-    [theme.breakpoints.down('md')]:{
 
-    }    
-}))
+
+
 
 function Login() {
+
+    const navigate = useNavigate();
+    const handleClick = () => {
+        navigate('/dashboard/home/cliente');
+    }
+
   return (
     <div
         css={css`
@@ -62,7 +72,7 @@ function Login() {
             <Box mb={2} ></Box>
             <TextField  label="Contraseña" variant="outlined" />
             <Box mb={2} ></Box>
-            <Button variant="contained"> Iniciar Seccion</Button>
+            <Button variant="contained" onClick={handleClick}> Iniciar Seccion</Button>
             
         </Root>
        
