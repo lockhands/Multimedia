@@ -12,7 +12,7 @@ import {
 import Login from './routes/Login';
 import BoletosScanner from './routes/BoletosScaner';
 import ValidateBoletos from './routes/ValidateBoletos';
-
+import HomeWorker from './routes/HomeWorker';
 
 import Dashboard from './routes/Dashboard';
 import HomeCliente from './routes/Cliente/HomeCliente';
@@ -38,6 +38,11 @@ const router = createBrowserRouter([
     path:'/dashboard/home/cliente',
     element:   <HomeCliente />
   },
+  {
+    path:'/dashboard/HomeWorker',
+    element: <HomeWorker />
+  }
+  
 ]);
 
 ReactDOM.createRoot(document.getElementById('root')).render(
