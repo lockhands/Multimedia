@@ -1,29 +1,26 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
-import { BottomNavigation, BottomNavigationAction,AppBar, Toolbar, Box, Paper } from "@mui/material";
+import { BottomNavigation, BottomNavigationAction, Paper } from "@mui/material";
 import { ReactComponent as Food } from "../../assets/Icons/Food.svg";
 import { ReactComponent as Home } from "../../assets/Icons/Home.svg";
 import { ReactComponent as Ticket } from "../../assets/Icons/Ticket.svg";
 import { useNavigate } from "react-router-dom";
 
-
-
-function BottomNavbar() {
+function BottomNavbar(props) {
 
 	const [value, setValue] = useState(0);
 
 	const navigate=useNavigate();
 
 	const handleHome = () => {
-		navigate('home/cliente');
+		navigate(props.home);
 	}
 	
 	const handleTickets =() =>{
-		navigate('tickets/cliente');
+		navigate(props.tickets);
 	}
 
 	const handlePedidos = () => {
-		navigate('pedidos/cliente');
+		navigate(props.pedidos);
 	}
 
 	return (
