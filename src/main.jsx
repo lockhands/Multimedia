@@ -31,15 +31,10 @@ const router = createBrowserRouter([
 			{ path: "validate-boletos/accept", element: <ValidateBoletos /> },
 			{ path: "home/cliente", element: <HomeCliente /> },
 			{ path: "HomeWorker", element: <HomeWorker /> },
-<<<<<<< HEAD
-      { path: 'OrdersScanner', element: <OrdersScanner/> }
-=======
+      { path: 'OrdersScanner', element: <OrdersScanner/> },
       { path: "pedidos/cliente",element:  <PedidosCliente /> },
       { path: "tickets/cliente", element: <TicketsCliente /> },
       
-
-      
->>>>>>> 1e2f30716dadd3d0c183ea84100fb0f7db251950
 		],
 	},
 ]);
