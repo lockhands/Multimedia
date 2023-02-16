@@ -1,52 +1,50 @@
-import React from 'react'
-import ReactDOM from 'react-dom/client'
+import React from "react";
+import ReactDOM from "react-dom/client";
+import MainLayout from "./routes/MainLayout";
 
+import "./index.css";
 
-import './index.css'
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
-import {
-  createBrowserRouter,
-  RouterProvider,
-} from "react-router-dom";
+import Login from "./routes/Login";
+import BoletosScanner from "./routes/BoletosScaner";
+import ValidateBoletos from "./routes/ValidateBoletos";
+import HomeWorker from "./routes/HomeWorker";
 
-import Login from './routes/Login';
-import BoletosScanner from './routes/BoletosScaner';
-import ValidateBoletos from './routes/ValidateBoletos';
-import HomeWorker from './routes/HomeWorker';
-
-import Dashboard from './routes/Dashboard';
-import HomeCliente from './routes/Cliente/HomeCliente';
+import Dashboard from "./routes/Dashboard";
+import HomeCliente from "./routes/Cliente/HomeCliente";
 
 const router = createBrowserRouter([
-  {
-    path: "/",
-    element: <Login />, 
-  },
-  {
-    path: "/dashboard",
-    element: <Dashboard />, 
-  },
-  {
-    path:'/dashboard/validate-boletos/scan',
-    element: <BoletosScanner />
-  },
-  {
-    path:'/dashboard/validate-boletos/accept',
-    element: <ValidateBoletos />
-  },
-  {
-    path:'/dashboard/home/cliente',
-    element:   <HomeCliente />
-  },
-  {
-    path:'/dashboard/HomeWorker',
-    element: <HomeWorker />
-  }
-  
+	{
+		path: "/",
+		element: <Login />,
+	},
+	{
+		path: "/dashboard",
+		element: <MainLayout />,
+		children: [
+			{ path: "", element: <Dashboard /> },
+			{ path: "validate-boletos/scan", element: <BoletosScanner /> },
+			{ path: "validate-boletos/accept", element: <ValidateBoletos /> },
+			{ path: "home/cliente", element: <HomeCliente /> },
+			{ path: "HomeWorker", element: <HomeWorker /> },
+		],
+	},
+	{
+		path: "/cliente",
+		element: <MainLayout />,
+		children: [
+			{ path: "", element: <Dashboard /> },
+			{ path: "validate-boletos/scan", element: <BoletosScanner /> },
+			{ path: "validate-boletos/accept", element: <ValidateBoletos /> },
+			{ path: "home/cliente", element: <HomeCliente /> },
+			{ path: "HomeWorker", element: <HomeWorker /> },
+		],
+	},
 ]);
 
-ReactDOM.createRoot(document.getElementById('root')).render(
-  <React.StrictMode>
-    <RouterProvider router={router} />
-  </React.StrictMode>,
-)
+ReactDOM.createRoot(document.getElementById("root")).render(
+	<React.StrictMode>
+		<RouterProvider router={router} />
+	</React.StrictMode>
+);
