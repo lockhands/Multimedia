@@ -1,7 +1,6 @@
 import { css } from '@emotion/react'
 import React from 'react'
 import {  Button } from '@mui/material';
-import BottomNavbar from '../components/molecules/BottomNavbar';
 
 function HomeWorker() {
 
@@ -71,7 +70,6 @@ function HomeWorker() {
         <Button variant="contained"> Procesar pedidos</Button>
         <Button variant="contained"> Cerrar sesión</Button>
         </div>
-        <BottomNavbar></BottomNavbar>
     </div>
    
   )

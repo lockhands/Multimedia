@@ -1,6 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import MainLayout from "./routes/MainLayout";
+import ClientLayout from "././routes/Cliente/ClientLayout";
+import WorkerLayout from "././routes/WorkerLayout";
 
 import "./index.css";
 
@@ -11,7 +12,6 @@ import BoletosScanner from "./routes/BoletosScaner";
 import ValidateBoletos from "./routes/ValidateBoletos";
 import HomeWorker from "./routes/HomeWorker";
 import OrdersScanner from "./routes/OrdersScanner";
-
 import Dashboard from "./routes/Dashboard";
 import HomeCliente from "./routes/Cliente/HomeCliente";
 import PedidosCliente from "./routes/Cliente/PedidosCliente";
@@ -24,17 +24,22 @@ const router = createBrowserRouter([
 	},
 	{
 		path: "/dashboard",
-		element: <MainLayout />,
+		element: <WorkerLayout />,
 		children: [
 			{ path: "", element: <Dashboard /> },
 			{ path: "validate-boletos/scan", element: <BoletosScanner /> },
 			{ path: "validate-boletos/accept", element: <ValidateBoletos /> },
-			{ path: "home/cliente", element: <HomeCliente /> },
 			{ path: "HomeWorker", element: <HomeWorker /> },
-      { path: 'OrdersScanner', element: <OrdersScanner/> },
-      { path: "pedidos/cliente",element:  <PedidosCliente /> },
-      { path: "tickets/cliente", element: <TicketsCliente /> },
-      
+			{ path: "OrdersScanner", element: <OrdersScanner /> },
+		],
+	},
+	{
+		path: "/cliente",
+		element: <ClientLayout />,
+		children: [
+			{ path: "home", element: <HomeCliente /> },
+			{ path: "pedidos", element: <PedidosCliente /> },
+			{ path: "tickets", element: <TicketsCliente /> },
 		],
 	},
 ]);

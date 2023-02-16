@@ -2,7 +2,6 @@ import React from 'react'
 import { css } from '@emotion/react'
 import {Paper, Box, Card, Typography,CardContent,CardActions,Button,Grid} from '@mui/material';
 
-import BottomNavbar from '../../components/molecules/BottomNavbar';
 
 const bull = (
     <Box
@@ -84,7 +83,6 @@ function HomeCliente (){
 
 
 
-                <BottomNavbar/>
             </div>
     );
 }
