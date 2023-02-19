@@ -14,6 +14,8 @@ function PedidosCliente() {
             height:100vh;
             text-align: center;
         `}>
+
+          <h2>pedidos</h2>
     </div>
   )
 }
