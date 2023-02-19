@@ -107,7 +107,7 @@ function TicketsCliente() {
     <box style={styles.view}>
     
         <div className="view-tickets-main">
-            <Typography style={styles.text}>hola</Typography>
+            <Typography variant="h5"  sx={{color:'white', paddingLeft: '5%'}}>Boletos</Typography>
             <div className="view-tickets-main-container">
                 <Button style={styles.boton1}>Reciente   </Button>
                 <Button style={styles.boton2}>Historial   </Button>
