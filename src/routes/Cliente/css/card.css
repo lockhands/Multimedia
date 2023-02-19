@@ -83,7 +83,7 @@ body{
 
 }
 
-.container .card1 .div1 .icono .icono1 {
+.container .card1 .div1 .icono .icono1{
 
     position: absolute;
     left: 45px;
@@ -148,27 +148,7 @@ body{
 
 }
 
-
-/* .container .card:hover{
-
-    transform: translateY(-15px);
-    box-shadow: 0 12px 16px rgba(0, 0, 0, 0.2);
-
-} */
-
-
-
-/* .container .card img{
-
-    width: 330px;
-    height: 220px;
-
-}
- */
-
-
-
-.container .card1 h4{
+.container .card1 h4 {
 
     font-family: Roboto;
     font-weight: 600;
@@ -176,7 +156,7 @@ body{
 
 }
 
-.container .card1 p{
+.container .card1 p {
     font-family: ubuntu;
     padding: 0 1rem;
     font-size: 16px;
@@ -184,11 +164,3 @@ body{
     font-weight: 300;
 
 }
-
-/* .container .card a{
-    
-    font-weight: 500;
-    text-decoration: none;
-    color: #3498db;
-
-} */
