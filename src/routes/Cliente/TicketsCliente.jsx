@@ -160,7 +160,7 @@ function TicketsCliente() {
         
         <Box style={styles.centrarhorizontal}>
             <Button sx={{ color: '#FFFF', background: '#FF8308'}} variant="contained" onClick={() => navigate('qr')}>Código QR</Button>
-            <Button sx={{  background: '#003EE4',}} variant="contained">Puestos</Button>
+            <Button sx={{  background: '#003EE4',}} variant="contained" onClick={() => navigate('puestos')}>Puestos</Button>
 
         </Box>
 

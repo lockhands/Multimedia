@@ -6,9 +6,9 @@ const WorkerLayout = () => {
 		<>
 			<Outlet />
 			<BottomNavbar
-				home="/dashboard"
-				tickets="/dashboard/validate-boletos/scan"
-				pedidos="/dashboard/OrdersScanner"
+				home="/dashboard/HomeWorker"
+				tickets="/dashboard/HomeWorker/validate-boletos"
+				pedidos="/dashboard/HomeWorker/Pedidos"
 			/>
 		</>
 	);
