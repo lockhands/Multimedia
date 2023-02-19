@@ -2,7 +2,9 @@ import React from 'react'
 import { css } from '@emotion/react'
 import {Paper, Box, Card, Typography,CardContent,CardActions,Button,Grid} from '@mui/material';
 import '../../styles/styles.css';
-
+import '../../styles/card.css'
+import AssignmentIcon from '@mui/icons-material/Assignment';
+import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 const bull = (
     <Box
       component="span"
@@ -21,7 +23,7 @@ function HomeCliente (){
 
       <div className='main'>
        
-         <h4>CINES UNIDOS</h4>
+         <Typography variant="h4" sx={{color:'white'}}>Cines Unidos</Typography>
         <hr/>
        </div>
     
@@ -34,17 +36,84 @@ function HomeCliente (){
           </div>
 
           <div className='main-dates-1'>
-          <Typography variant="h6" component="div">
+          <Typography variant="subtitle1" sx={{color:'#7BD7B8',marginTop:'2%',marginLeft:'10%'}}component="div">
           Febrero, 2023
      </Typography>
           </div>
    
-    </div>
+      </div>
 
     <Grid container justifyContent="flex-start" sx={{ml:'30%'}}>
     
     </Grid>
    
+    <div className="container">
+        
+        <div className="card1">
+          <div className="div1">
+            <div className="icono">
+              <AssignmentIcon className="icono1" /* sx={{ color: '#FF8308',height: '50px',width: '50px',position: 'absolute', left: '45px',top: '35px', }} */ />
+            </div>
+            <div className="tipotike">
+
+              <h4>tickes</h4>
+              <p>Bs. 100</p>
+
+            </div>
+            <div className="metodo">
+
+              <h4>metodo de pago</h4>
+              <p>efectivo</p>
+
+            </div>
+
+          </div>
+          <div className="div2">
+            <h4>No factura</h4>
+            <p>KFF5TZS</p>
+            <h4>1 febrero, 2023</h4>
+            <p>01:41 pm</p>
+            <div className="a1">
+              <a href="#">Ver Mas</a>
+            </div>
+          </div>
+        </div>
+
+
+
+
+        <div className="card1">
+          <div className="div1">
+            <div className="icono">
+              <ShoppingCartIcon className="icono1" /* sx={{ color: '#FF8308',height: '50px',width: '50px',position: 'absolute', left: '45px',top: '35px', }} */  />
+            </div>
+            <div className="tipotike">
+
+              <h4>pedidos</h4>
+              <p>Bs. 100</p>
+
+            </div>
+            <div className="metodo">
+
+              <h4>metodo de pago</h4>
+              <p>efectivo</p>
+
+            </div>
+
+          </div>
+          <div className="div2">
+            <h4>No factura</h4>
+            <p>AUEQK35S</p>
+            <h4>2 febrero, 2023</h4>
+            <p>05:41 pm</p>
+            <div className="a1">
+              <a href="#">Ver Mas</a>
+            </div>
+          </div>
+        </div>  
+
+      </div>
+
 
     
 

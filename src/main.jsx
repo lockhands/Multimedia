@@ -10,7 +10,7 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Login from "./routes/Login";
 import BoletosScanner from "./routes/BoletosScaner";
 import ValidateBoletos from "./routes/ValidateBoletos";
-import HomeWorker from "./routes/HomeWorker";
+import HomeWorker from "./routes/Trabajador/HomeWorker";
 import OrdersScanner from "./routes/OrdersScanner";
 import Dashboard from "./routes/Dashboard";
 import HomeCliente from "./routes/Cliente/HomeCliente";
@@ -18,7 +18,9 @@ import PedidosCliente from "./routes/Cliente/PedidosCliente";
 import TicketsCliente from "./routes/Cliente/TicketsCliente";
 import Index from "./routes/Index";
 import LoginCliente from "./routes/Cliente/LoginCliente";
-import LoginTrabajador from "./routes/LoginTrabajador";
+import LoginTrabajador from "./routes/Trabajador/LoginTrabajador";
+import CodigoQRBoletos from "./routes/Cliente/CodigoQRBoletos";
+import CodigoQRPedidos from "./routes/Cliente/CodigoQRPedidos";
 
 const router = createBrowserRouter([
 	{
@@ -39,6 +41,8 @@ const router = createBrowserRouter([
 			{ path: "home", element: <HomeCliente /> },
 			{ path: "pedidos", element: <PedidosCliente /> },
 			{ path: "tickets", element: <TicketsCliente /> },
+			{ path: "tickets/qr", element: <CodigoQRBoletos/>},
+			{path:"pedidos/qr",element:<CodigoQRPedidos /> },
 		],
 	},
   {

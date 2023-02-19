@@ -7,7 +7,7 @@ function HomeWorker() {
       
   return (
     
-    <div
+    div
         css={css`
         display: grid;
         place-items: center;
@@ -32,7 +32,7 @@ function HomeWorker() {
             place-items: center;
             text-align: center;
             width: 100%;
-            max-width: 300px; 
+            m<ax-width: 300px; 
         `}>
         <h4>CINES UNIDOS</h4>
         <hr css={css`

@@ -1,12 +1,15 @@
 import { css } from '@emotion/react'
 import React from 'react'
-import {  Button, ImageListItem, Typography } from '@mui/material';
+import {  Button, ImageListItem, Typography,Box } from '@mui/material';
 import LayoutSuperiorBoletos from '../../components/molecules/LayoutSuperiorBoletos';
 import '../../styles/tickets/estilos.css';
 import { ReactComponent as Calendar } from '../../assets/icons/Calendar.svg';
 import { ReactComponent as Clock } from '../../assets/icons/Clock.svg';
 import { ReactComponent as Ticket } from '../../assets/icons/Ticket2.svg';
+import { useNavigate } from 'react-router-dom';
 function TicketsCliente() {
+
+    const navigate=useNavigate();
 
     const styles ={
         boton1:{
@@ -29,6 +32,7 @@ function TicketsCliente() {
             alignItems: 'flex-start',
             height: '100vh',
             backgroundColor: '#0E1321',
+         
         },
         main:{
             display: 'flex',
@@ -101,10 +105,10 @@ function TicketsCliente() {
       
   }
   
-  
+
   return (
-    <div>
-    <box style={styles.view}>
+    
+    <Box style={styles.view}>
     
         <div className="view-tickets-main">
             <Typography variant="h5"  sx={{color:'white', paddingLeft: '5%'}}>Boletos</Typography>
@@ -114,54 +118,54 @@ function TicketsCliente() {
             </div>
         </div>
 
-        <box style={styles.factura}>
+        <Box style={styles.factura}>
         <Typography style={styles.text}>N° KFF5TZS</Typography>
-        </box>
+        </Box>
 
-        <box style={styles.centrarpantalla}>
+        <Box style={styles.centrarpantalla}>
 
-            <box   style={styles.cuadro} sx={{ border: '1px dashed grey' }}>
+            <Box   style={styles.cuadro} sx={{ border: '1px dashed grey' }}>
                  
                  <ImageListItem style={styles.imagen}>
                     <img  src={`https://lumiere-a.akamaihd.net/v1/images/poster-avatar-2-lat_46034440_1_c359a2d2.png`}/>
                  </ImageListItem>
-            </box>
+            </Box>
             <Typography variant="h5" sx={{color:'white'}}>Avatar. El camino del agua</Typography>
             <Typography variant="subtitle1" sx={{color:'#7BD7B8'}} >Director. James Cameron</Typography>
-        </box>
+        </Box>
 
-        <box style={styles.centrarhorizontal}>
+        <Box style={styles.centrarhorizontal}>
             <Typography variant="body1" sx={{color:'#7BD7B8'}}>2022</Typography>
             <Typography variant="body1" sx={{color:'#7BD7B8'}}>Sub. Español</Typography>
             <Typography variant="body1" sx={{color:'#7BD7B8'}}>3h 2m</Typography>
-        </box>
+        </Box>
 
       
        
 
-        <box style={styles.centrarhorizontal}>
-            <box style={styles.centrarverticalmente}>
+        <Box style={styles.centrarhorizontal}>
+            <Box style={styles.centrarverticalmente}>
             <Calendar />
             <Typography style={styles.text}>03/02</Typography>
-            </box>
-            <box style={styles.centrarverticalmente}>
+            </Box>
+            <Box style={styles.centrarverticalmente}>
             <Clock />
             <Typography style={styles.text}>18:15</Typography>
-            </box>
-            <box style={styles.centrarverticalmente}>
+            </Box>
+            <Box style={styles.centrarverticalmente}>
             <Ticket />
             <Typography style={styles.text}>3</Typography>
-            </box>
-        </box>
+            </Box>
+        </Box>
         
-        <box style={styles.centrarhorizontal}>
-            <Button sx={{ color: '#FFFF', background: '#FF8308'}} variant="contained">Código QR</Button>
+        <Box style={styles.centrarhorizontal}>
+            <Button sx={{ color: '#FFFF', background: '#FF8308'}} variant="contained" onClick={() => navigate('qr')}>Código QR</Button>
             <Button sx={{  background: '#003EE4',}} variant="contained">Puestos</Button>
 
-        </box>
+        </Box>
 
-        </box>
-        </div>
+        </Box>
+        
   )
 
  
