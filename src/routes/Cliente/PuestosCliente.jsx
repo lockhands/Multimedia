@@ -20,41 +20,53 @@ function PuestosCliente() {
 
         <div className="puesto-lobo">
 
-            <Typography sx={{color:'white'}}>
-                Escanéalo
+            <div className="puesto-container-header">
+
+            
+            <Typography variant="h6" sx={{color:'white'}}>
+               
             </Typography>
-        
+            </div>
             <div className="puesto-oso">
                 <img src={Pantalla}>
                 
                 </img>
             </div>
 
-            <div className="puestos-container">
+            <div className="puestos-container-c">
                 <div className="puestos-container-1">  
                     {
                     array1.map( el => (
-                        <div key={el.value} className="listop">
-                            <Typography xs={{color:'white'}}>{el}</Typography>
+                        <div key={el} id={`div-${el}`} className="listop">
+                            <Typography xs={{color:'white'}}></Typography>
                         </div>
                     ))
                     } 
                 
                 </div>
                 <div className="puestos-container-2"> 
-                {/*
+                {
                     array2.map( el => (
-                        <div key={el.value} className="listop">
-                            <Typography xs={{color:'white'}}>{el}</Typography>
+                        <div key={el.value} id={`div-${el}`} className="listop">
+                            <Typography xs={{color:'white'}}></Typography>
                         </div>
                     ))
-                    */
+                    
                      } 
                       </div>
+                      
             </div>
+
+            <div className="puesto-container-label">
+                <div className="puesto-container-label-1">
+                    <div className="puesto-container-label-1-item"></div>
+                    <Typography sx={{color:'#FF8308'}}>Puestos elegidos</Typography>
+                </div>
+            </div>
+            
         </div>
       
-            
+         
 </div>
         </div>
     )
