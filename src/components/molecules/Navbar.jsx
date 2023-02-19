@@ -34,7 +34,6 @@ function Navbar() {
         display:flex;
         justify-content:space-between;
         align-items:center;
-        height:5rem;
         color:white;
       `}
     >
