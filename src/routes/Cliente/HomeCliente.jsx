@@ -3,6 +3,7 @@ import React from 'react'
 import {Paper, Box, Card, Typography,CardContent,CardActions,Button,Grid} from '@mui/material';
 import AssignmentIcon from '@mui/icons-material/Assignment';
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
+import { pink } from '@mui/material/colors';
 
 import image1 from './css/combopequeno.jpg'
 import image2 from './css/combomediano.jpg'
@@ -95,7 +96,7 @@ function HomeCliente (){
         <div class="card1">
           <div class="div1">
             <div class="icono">
-              <AssignmentIcon class="icono1" />
+              <AssignmentIcon class="icono1" sx={{ color: '#FF8308',height: '50px',width: '50px',position: 'absolute', left: '45px',top: '35px', }} />
             </div>
             <div class="tipotike">
 
@@ -128,7 +129,7 @@ function HomeCliente (){
         <div class="card1">
           <div class="div1">
             <div class="icono">
-              <ShoppingCartIcon class="icono1" />
+              <ShoppingCartIcon class="icono1" sx={{ color: '#FF8308',height: '50px',width: '50px',position: 'absolute', left: '45px',top: '35px', }} />
             </div>
             <div class="tipotike">
 
