@@ -3,7 +3,7 @@ import React from 'react'
 import {Paper, Box, Card, Typography,CardContent,CardActions,Button,Grid} from '@mui/material';
 import AssignmentIcon from '@mui/icons-material/Assignment';
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
-
+/* import '../../styles/styles.css'; */
 
 import './css/card.css'
 
@@ -12,7 +12,7 @@ const bull = (
       component="span"
       sx={{ display: 'inline-block', mx: '2px', transform: 'scale(0.8)' }}
     >
-      •
+      
     </Box>
   );
   
@@ -20,40 +20,33 @@ const bull = (
 
 function HomeCliente (){
     return(
-            <div
-            css={css`
-            display: grid;
-            place-items: center;
-                align-items:center;
-                height:50vh;
-                text-align: center;
-            `}
-            >
+            
+    <div className='view'>
 
-<div css={css`
-            display: grid;
-            place-items: center;
-            text-align: center;
-            width: 75%;
-            max-width: 300px; 
-        `}>
-        <h4>CINES UNIDOS</h4>
-        <hr css={css`
-            width: 100%;
-            max-width: 300px; 
-        `} />
-    </div>
+      <div className='main'>
+       
+         <h4>CINES UNIDOS</h4>
+        <hr/>
+       </div>
     
-    <Grid container justifyContent="flex-start" sx={{ml:'10%'}}>
-    <Typography variant="h5" component="div">
+        <div className='main-dates'>
+
+          <div className='main-dates-1'>
+            <Typography   variant="h5" component="div">
           Ultimos recibos
-        </Typography>
-    </Grid>
+            </Typography>
+          </div>
+
+          <div className='main-dates-1'>
+          <Typography variant="h6" component="div">
+          Febrero, 2023
+     </Typography>
+          </div>
+   
+    </div>
 
     <Grid container justifyContent="flex-start" sx={{ml:'30%'}}>
-    <Typography variant="h5" component="div">
-          Febrero, 2023
-        </Typography>
+    
     </Grid>
 
     <div className="container">

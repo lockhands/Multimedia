@@ -1,11 +1,20 @@
 import React, { useState } from "react";
-import { BottomNavigation, BottomNavigationAction, Paper } from "@mui/material";
+import { BottomNavigation, BottomNavigationAction, Paper, Typography } from "@mui/material";
 import { ReactComponent as Food } from "../../assets/icons/Food.svg";
 import { ReactComponent as Home } from "../../assets/icons/Home.svg";
 import { ReactComponent as Ticket } from "../../assets/icons/Ticket.svg";
 import { useNavigate } from "react-router-dom";
 
 function BottomNavbar(props) {
+
+	const styles={
+		navbar:{
+			background:'#1D2334',
+		},
+		text:{
+			color:'#DEBF4E',
+		},
+	};
 
 	const [value, setValue] = useState(0);
 
@@ -24,33 +33,41 @@ function BottomNavbar(props) {
 	}
 
 	return (
-		<Paper sx={{  position: 'fixed', bottom: 0, left: 0, right: 0}} elevation={3}>
+		<Paper   sx={{  position: 'absolute', bottom: 0, left: 0, right: 0}} elevation={3}>
 
 	
-		<BottomNavigation
+		<BottomNavigation 
 			showLabels
 			value={value}
+			style={styles.navbar}
 			onChange={(event, newValue) => {
 				setValue(newValue);
 			}}
 		>
-			<BottomNavigationAction
-				label="Home"
-				icon={<Food fill="#898989" />} /* fill solo */
-				onClick={handleHome}
-			/>
 
 			<BottomNavigationAction
-				label="Tickets"
+			style={styles.navbar}
+				label={<Typography style={styles.text}>Home</Typography>}
+				icon={<Home stroke="#DEBF4E" />} /* fill solo */
+				onClick={handleHome}
+			
+			/>
+
+
+			<BottomNavigationAction
+			
+				label={<Typography style={styles.text}>Boletos</Typography>}
 				onClick={handleTickets}
-				icon={<Home stroke="#898989" />}
+			
+				icon={<Ticket fill="#DEBF4E" stroke="#DEBF4E" />}
 			/>
 			{/* stroke solo */}
-
+		
 			<BottomNavigationAction
-				label="Pedidos"
+			
+				label={<Typography style={styles.text}>Pedidos</Typography>}
 				onClick={handlePedidos}
-				icon={<Ticket fill="#898989" />}
+				icon={	<Food fill="#DEBF4E" />	}
 			/>
 			{/* fill solo */}
 		</BottomNavigation>

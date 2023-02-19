@@ -54,7 +54,7 @@ body{
 .container .card1 {
     background-color: #1D2334;
     position: relative;
-    min-width: 390px;
+    min-width: 350px;
     width: 430px;
     height: 120px;
     border-radius: 20px;

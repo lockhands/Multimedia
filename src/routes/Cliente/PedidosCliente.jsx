@@ -1,11 +1,13 @@
 import { css } from '@emotion/react'
 import React from 'react'
-import {  Button } from '@mui/material';
-
+import {  Button, Typography } from '@mui/material';
+import '../../styles/styles.css';
+import LayoutSuperior from '../../components/molecules/LayoutSuperiorPedidos';
 function PedidosCliente() {
 
       
   return (
+
     <div
         css={css`
         display: grid;
@@ -16,8 +18,16 @@ function PedidosCliente() {
         `}>
 
           <h2>pedidos</h2>
-    </div>
+
+    <div className='view'
+        >
+          <LayoutSuperior nombre="Pedidos" />
+          <div className='main'> 
+              
+          </div>
+
+    </div></div>
   )
-}
+  }
 
 export default PedidosCliente
