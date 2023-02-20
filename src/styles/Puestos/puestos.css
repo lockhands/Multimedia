@@ -67,7 +67,7 @@
 
 .puestos-container-c{
   width: 95%;
-  height: 100%;
+  height: 80%;
   display: flex;
 	flex-direction: row;
 	flex-wrap: nowrap;
@@ -78,7 +78,7 @@
 
 .puestos-container-1{
   width:50%;
-  height:80%;
+  height:90%;
 	display: flex;
 	flex-direction: column;
 	flex-wrap: wrap-reverse;
@@ -91,7 +91,7 @@
 
 .puestos-container-2{
   width:50%;
-  height:80%;
+  height:90%;
   display: flex;
 	flex-direction: column;
 	flex-wrap: wrap;

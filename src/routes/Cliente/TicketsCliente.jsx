@@ -2,7 +2,7 @@ import { css } from '@emotion/react'
 import React from 'react'
 import {  Button, ImageListItem, Typography,Box } from '@mui/material';
 import LayoutSuperiorBoletos from '../../components/molecules/LayoutSuperiorBoletos';
-import '../../styles/tickets/estilos.css';
+import '../../styles/layouts/CB1.css';
 import { ReactComponent as Calendar } from '../../assets/icons/Calendar.svg';
 import { ReactComponent as Clock } from '../../assets/icons/Clock.svg';
 import { ReactComponent as Ticket } from '../../assets/icons/Ticket2.svg';
@@ -110,7 +110,7 @@ function TicketsCliente() {
     
     <Box style={styles.view}>
     
-        <div className="view-tickets-main">
+        <div className="CB1-layout">
             <Typography variant="h5"  sx={{color:'white', paddingLeft: '5%'}}>Boletos</Typography>
             <div className="view-tickets-main-container">
                 <Button style={styles.boton1}>Reciente   </Button>
