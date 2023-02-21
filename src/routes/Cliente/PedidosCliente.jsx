@@ -6,6 +6,7 @@ import LayoutSuperior from '../../components/molecules/LayoutSuperiorPedidos';
 
 import './css/card1.css'
 import imagen from './css/cine.jpeg'
+import imagen1 from './css/savoychocos.jpg'
 
 import AssignmentIcon from '@mui/icons-material/Assignment';
 
@@ -44,14 +45,36 @@ function PedidosCliente() {
               </div>
               <div className="div2">
                 <h4>No factura</h4>
-                <p>cripetas grandes 230 gr bebidad grandes 798ml</p>
+                <p>pedidos</p>
                 
                 <div className="a1">
-                  <a href="#">cantidad:  05</a>
+                  <a href="#">cantidad:  2</a>
                 </div>
               </div>
+              
+              <div className='div1_1'>
+
+                <div className="ima">
+                  <img src={imagen1}></img>
+                </div>
+
+              </div>
+              <div className='div1_2'>
+
+                <h4>No factura</h4>
+                <p>pedidos</p>
+                
+                <div className="a1">
+                  <a href="#">cantidad:  1</a>
+                </div>
+
+              </div>
+
             </div>
-            <div className="card2">
+            
+            
+            
+            <div className="card1">
               <div className="div1">
                 <div className="ima">
                   <img src={imagen}></img>
