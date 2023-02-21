@@ -1,43 +1,41 @@
 import React from "react";
 
 import { Button, Typography } from "@mui/material";
-import '../../styles/Trabajador/Pedidos.css';
-import { ReactComponent as Food2 } from "../../assets/icons/Home.svg";
 import { useNavigate } from "react-router-dom";
 
-function PedidosWorkers(){
+import '../../styles/Trabajador/Pedidos.css';
 
+import pedidoPhoto from '../../assets/pedido.webp'
+
+import Done from '@mui/icons-material/Done'
+
+import Layout from "../../components/molecules/Layout";
+import Pedido from "../../components/molecules/Pedido";
+
+function PedidosWorkers(){
    const navigate = useNavigate();
 
     return(
-        <div>
-            <div>
-            <div className="aview-tickets-main">
-     
-  
-            <Typography variant="h5"  sx={{color:'white', paddingLeft: '5%'}}>Pedidos </Typography>
-            <Button variant="contained" onClick={ () => navigate("Scanner")}>Escanear
-    </Button>
-            </div>
-
-           
-            <div className="aview-tickets">
-                       
-                        <div className="acontainer-contorno-aviso">
-                        <Typography variant="h5" sx={{color:'white'}}>Pedidos pendientes:</Typography>
-                        <div>
-
-                            {
-                                //Aqui vienen las cards
-                            }
-                             </div>
-                             
-                        </div>
+        <div className="pedidos-pendientes" >
+            <Layout nombre="Pedidos" link="/dashboard/HomeWorker" />
+            <div className="content" >
+                <div>
+                    <Typography variant="h4" sx={{color:'white'}}>Pedidos pendientes:</Typography>
+                    <ul  className="pedidos-list">
+                        <Pedido />
+                        <Pedido />
+                    </ul>
+                </div>
+                <Button 
+                    startIcon={<Done />}
+                    variant="contained" 
+                    onClick={() => navigate("/dashboard/HomeWorker/ordenes")}
+                >
+                    <Typography variant="buttontext" >Escanear Pedido</Typography>
+                </Button>
             </div>
         </div>
-
-        </div>
-    );
+    )
 }
 
 export default PedidosWorkers

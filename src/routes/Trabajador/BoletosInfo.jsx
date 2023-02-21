@@ -4,52 +4,50 @@ import {  Button,Typography } from '@mui/material';
 import '../../styles/styles.css';
 import { useNavigate } from 'react-router-dom';
 import Layout from '../../components/molecules/Layout';
-import '../../styles/layout.css'
+import '../../styles/Trabajador/boletos-info.css'
+import {ReactComponent as Ticket} from '../../assets/icons/Ticket3.svg';
+
+import Done from '@mui/icons-material/Done'
+
 
 function BoletosInfo() {
-
-
-      const navigate=useNavigate();
+  const navigate=useNavigate();
 
   return (
-    
-    <div className='view'>
+    <div className='boletos-info'>      
+      <Layout nombre="Zona de control" link="/dashboard/HomeWorker/validate-boletos" />
+      <div className='content-container' >
+        <div className='content'>
+          <div className='info-card' >
+            <div className='info-card-header info-card-el'>
+              <Typography > Dahyana Mendoza </Typography>
+              <Typography  className='cedula' > V-15.128.359 </Typography>
+            </div>
+            <Typography className='info-card-el' variant="h6"> Avatar. El camino del agua </Typography>
+            <Typography className='info-card-el' variant="h6"> Sala 4-A </Typography>
+            <Button 
+              className='info-card-el'
+              variant="contained" 
+              startIcon={<Ticket />}
 
-          <div className='container-layout'>
-       
-       
-          <Layout nombre="Zona de control" link="/dashboard/HomeWorker/validate-boletos" />
+            >
+              <Typography variant="buttontext" > 5 personas </Typography>
+            </Button>
 
-       
- 
-     </div>
-
-    <div className='pato'>
-     
-         <div className='araña'>
-            <Typography variant="h4" sx={{margin:'5%'}}>¡Bienvenida!</Typography>
-            <Typography variant="h6" sx={{margin:'5%'}}>Dahyana Nimo</Typography>
-            <Typography variant="outlined" sx={{margin:'5%'}}>V-123.456.789</Typography>
-         </div>
-      
-
+          </div>
+          <div className='action' >
+            <Button 
+              startIcon={<Done />}
+              sx={{backgroundColor:'orange'}}
+              variant="contained" 
+              onClick={() => navigate("/dashboard/HomeWorker")}
+            >
+              <Typography variant="buttontext" >Confirmar</Typography>
+            </Button>
+          </div>
+        </div>
+      </div>
     </div>
-
-    <div className='ardilla'>
-    <div className='conejo'>
-
-    
- 
-    <Button variant="contained" sx={{backgroundColor:'#FF8308'}} onClick={() => navigate('/dashboard/HomeWorker/validate-boletos')}>
-        <Typography variant="buttontext" sx={{marginLeft:'5%' }}>Confirmar</Typography>
-    </Button>
-    
-
-    </div>
-    </div>
-
-    </div>
-   
   )
 }
 

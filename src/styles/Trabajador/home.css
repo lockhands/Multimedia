@@ -1,0 +1,83 @@
+.main-dates-propio {
+    margin-top:2rem;
+}
+
+.home-worker {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.home-worker-topside {
+    width: 100%;
+}
+
+.home-worker-main {
+    text-align: center;
+    margin-top:0.5rem;
+    
+}
+
+.welcome-message {
+    background-color: #1D2334;
+    display: flex;
+    flex-direction: column;
+    border: solid 1.5px #395CEA;
+    border-radius: 5%;
+    align-items: center;
+    align-self: stretch;
+    margin: 1rem min(5%,5rem);
+    color:white;
+    padding:2rem;
+    
+}
+
+.welcome-message h4, .welcome-message h5, .welcome-message span {
+    margin-top:0.5rem;
+    
+}
+
+.main-buttons {
+    display: flex;
+	flex-direction: column;
+	align-items: stretch;
+    align-self: stretch;
+    margin-bottom: 2rem;
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+
+}
+
+@media (min-width: 300px) {
+    .main-buttons {
+        margin-left: 10%;
+        margin-right: 10%;
+    }
+}
+
+
+
+
+
+
+.main-buttons button {
+    width: 100%;
+    margin-bottom: 3rem;
+    padding:1rem 3rem;
+}
+
+
+.main-dates{
+    color:white;
+    margin:5%;
+    width: 100%;
+}
+
+
+.main-pedidos{
+    color:white;
+}
+
+
+

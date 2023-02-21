@@ -1,52 +1,31 @@
 
-.aview-tickets{
-  display: flex;
-flex-direction: column;
-align-items:center;
-justify-content: center;
-  height: 100vh;
+
+.pedidos-pendientes button {
+  margin-top: 4rem;
+  align-self:center ;
+  padding: 0.8rem 3rem;
+  font-weight: bold;
+  background-color: #FF8308;
+}
+
+.pedidos-pendientes .content {
+
   background-color: #0E1321;
-  
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
-.aview-tickets-main{
-display: flex;
-flex-direction: row;
-flex-wrap: nowrap;
-justify-content: space-between;
-align-items: center;
-align-content: stretch;
-width: auto;
-height: 6.5vh;
-background-color: #30374B;
-color:white;
-}
-
-.acontainer{
-width: 100%;
-height: 50vh;
-display: flex;
-flex-direction: column;
-flex-wrap: nowrap;
-justify-content: center;
-align-items: center;
+.pedidos-pendientes h4 {
+  text-align: center;
 
 }
 
 
-.acontainer-contorno-aviso{
-width: 85%;
-height: 90%;
-direction: column;
-background-color: transparent;
-color:white;
-
-display: flex;
-flex-direction: column;
-flex-wrap: nowrap;
-justify-content: flex-start;
-align-items: baseline;
-align-content: stretch;
-
-
+.pedidos-pendientes .pedido-list {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
 }
+
