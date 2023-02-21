@@ -2,6 +2,8 @@ import { css } from "@emotion/react";
 import { Outlet } from "react-router-dom";
 import BottomNavbar from "../components/molecules/BottomNavbar";
 
+import Navbar from '../components/molecules/Navbar'
+
 const WorkerLayout = () => {
 	return (
 		<div
@@ -14,13 +16,14 @@ const WorkerLayout = () => {
 					overflow-y:scroll;
 				}
 				
-				@media (min-width: 600px) {
+				@media (min-width: 800px) {
 					.outlet-wrapper {
 						height: 100vh;
 					}
 				}
 			`}
 		>
+			<Navbar></Navbar>
 			<div className="outlet-wrapper">
 				<Outlet />
 			</div>

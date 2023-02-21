@@ -33,7 +33,7 @@ function BottomNavbar(props) {
 	return (
 		<Paper
 			css={css`
-				@media (min-width: 600px) {
+				@media (min-width: 800px) {
 					display:none;
 				}
 				border-radius:0;
