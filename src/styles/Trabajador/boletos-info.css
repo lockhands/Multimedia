@@ -1,0 +1,72 @@
+.boletos-info .info-card-el {
+    margin-bottom: 0.5rem;
+}
+
+.boletos-info button {
+    text-transform: none;
+    font-size: 1rem;
+    font-weight: bolder;
+    padding: 0.5rem 3rem;
+}
+
+
+.boletos-info .content {
+    position: relative;
+    align-self: stretch;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    bottom: 2rem;
+}
+
+
+
+.boletos-info .cedula {
+    color: #BABABA  
+}
+
+
+
+.boletos-info .info-card-header {
+    display: flex;  
+    align-self: stretch;
+    justify-content: space-between;
+    margin-left: 1rem;
+    margin-right: 1rem;
+
+    border-bottom: solid 1px #A8A8A8;
+}
+
+
+
+.boletos-info .info-card {
+    display: flex;
+    align-self: stretch;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem 0rem;
+    background-color: #1D2334;
+    border: solid 1.5px;
+    border-color: #395CEA;
+    color:white;
+    border-radius: 1rem;
+    margin: 0 2.5rem 2rem 2.5rem;
+}
+
+
+.boletos-info {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    background-color: #0E1321;
+}
+
+.boletos-info .content-container {
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex-grow:1;
+
+}
