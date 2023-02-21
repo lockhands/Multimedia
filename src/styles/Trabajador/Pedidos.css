@@ -1,11 +1,7 @@
 
-.pedidos-pendientes {
-  height: 100vh;
-
-}
 
 .pedidos-pendientes button {
-  margin-bottom: 128px ;
+  margin-top: 4rem;
   align-self:center ;
   padding: 0.8rem 3rem;
   font-weight: bold;
@@ -13,7 +9,7 @@
 }
 
 .pedidos-pendientes .content {
-  height: 100vh;
+
   background-color: #0E1321;
   padding: 2rem;
   display: flex;

@@ -7,9 +7,6 @@
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
-    height: 100vh;
-    background-color: #0E1321;
-    
 }
 
 .home-worker-topside {
@@ -46,7 +43,7 @@
 	flex-direction: column;
 	align-items: stretch;
     align-self: stretch;
-    margin-bottom: 20vh;
+    margin-bottom: 2rem;
     margin-left: 0.5rem;
     margin-right: 0.5rem;
 

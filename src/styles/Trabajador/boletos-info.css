@@ -57,8 +57,7 @@
 .boletos-info {
     display: flex;
     flex-direction: column;
-    height: 100vh;
-    background-color: #0E1321;
+    height: 100%;
 }
 
 .boletos-info .content-container {

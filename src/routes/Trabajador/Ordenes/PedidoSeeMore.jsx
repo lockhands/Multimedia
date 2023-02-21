@@ -14,8 +14,6 @@ function PedidoSeeMore() {
     <div
         css={css`
             position:relative;
-            height:100vh;
-            background-color:#0E1321;
             img {
                 width : 100%;
                 border-radius : 0 0 1.5rem 1.5rem;

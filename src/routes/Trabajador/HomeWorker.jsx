@@ -12,7 +12,7 @@ function HomeWorker() {
   return (
     
     <div className='home-worker'>
-
+      
       <div className='home-worker-topside'>
         <div className='home-worker-main'>
           <Typography variant="h4" sx={{color:'white'}}>Cines Unidos</Typography>

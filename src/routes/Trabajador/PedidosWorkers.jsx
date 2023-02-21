@@ -15,8 +15,6 @@ import Pedido from "../../components/molecules/Pedido";
 function PedidosWorkers(){
    const navigate = useNavigate();
 
-    console.log(pedidoPhoto);
-
     return(
         <div className="pedidos-pendientes" >
             <Layout nombre="Pedidos" link="/dashboard/HomeWorker" />

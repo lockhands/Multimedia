@@ -1,11 +1,3 @@
-.ordenes-container {
-    height: 93.5vh;
-    background-color: #0E1321;
-    color: white;
-
-
-
-}
 
 
 .ordenes-container .main-content {
@@ -14,7 +6,7 @@
     flex-direction: column;
     max-height: 100%;
     overflow-y: scroll;
-    padding-bottom: 5rem;
+    padding-bottom: 3rem;
 }
 
 .ordenes-container .order-code {
@@ -28,7 +20,7 @@
 }
 
 .ordenes-container button {
-    margin: 1.5rem 0;
+    margin: 1.5rem 0 0 0;
     align-self: center;
     background-color: #FF8308;
 }
