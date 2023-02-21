@@ -29,6 +29,63 @@
     /* max-width: 300px; */
 }
 
+.ardilla{
+    
+    width: 100%;
+    height: 15%;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
+.pato{
+    width: 100%;
+    height: 50%;
+    display: flex;
+	flex-direction: column;
+	flex-wrap: nowrap;
+	justify-content: center;
+	align-items: center;
+}
+
+.conejo{
+    height:100%;
+    width:75%;
+    display: flex;
+	flex-direction: column;
+	flex-wrap: nowrap;
+	justify-content: space-between;
+	align-items: stretch;
+	align-content: stretch;
+}
+
+.araña{
+  display:flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  width: 75%;
+  height: 75%;
+  background-color: #1D2334;
+  border: solid 1.5px;
+  border-color: #395CEA;
+  color:white;
+  border-radius: 5%;
+  padding:0;
+}
+
+.perro{
+    box-sizing: content-box;
+    display:flex;
+  
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
 
 h4{
     color:white;

@@ -1,6 +1,6 @@
 import { css } from '@emotion/react'
 import React from 'react'
-import Logo from '../components/Logo'
+import Logo from '../../components/Logo'
 import { Box , Button, TextField } from '@mui/material';
 import { styled } from '@mui/material/styles';
 import Typography from '@mui/material/Typography';
