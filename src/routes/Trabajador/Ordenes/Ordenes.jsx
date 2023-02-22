@@ -1,12 +1,12 @@
-import { Button, Typography } from '@mui/material'
 import React, { useState } from 'react'
+import { useNavigate } from 'react-router-dom'
+import { Button, css, Typography } from '@mui/material'
+
 import Layout from '../../../components/molecules/Layout'
 import Pedido from '../../../components/molecules/Pedido'
-
-import './ordenes.css'
-import Done from '@mui/icons-material/Done'
 import ConfirmPopup from '../../../components/molecules/ConfirmPopup'
-import { useNavigate } from 'react-router-dom'
+import PedidosList from '../../../components/molecules/PedidosList'
+import ConfirmButton from '../../../components/atoms/ConfirmButton'
 
 
 function Ordenes() {
@@ -24,44 +24,63 @@ function Ordenes() {
   }
 
   return (
-    <div className='ordenes-container'>
+    <div
+      className='ordenes-container'
+      css={css`
+          .order-code {
+            color:#395CEA;
+          }
+
+          h4 {
+            margin:1rem 0;
+          }
+
+          .main-content {
+            padding: 1rem;
+          }
+          @media (min-width: 800px) {
+            padding: 1.5rem 3rem;
+          }
+      `}
+    >
       {
         popup && <ConfirmPopup onResolve={onResolve} />
       }
 
       <Layout nombre="Orden Escaneada" link="/dashboard/HomeWorker" />
       <div className='main-content'>
-        <Typography variant="h6" > 
+        <Typography variant="h5" > 
           Orden : <span className='order-code' > #ABCD4548988 </span>
         </Typography>
 
-          <Typography variant="h5" > 
-            Pedidos
+          <Typography variant="h4" > 
+            Invidivuales
           </Typography>
-          <ul className='pedidos-list'>
-            <Pedido />
-            <Pedido />
-            <Pedido />
-          </ul>
+          <PedidosList
+            css={css`
+              align-self:center;  
+            `}
+          >
+            <li> <Pedido /> </li>
+            <li> <Pedido /> </li>
+            <li> <Pedido /> </li>
+          </PedidosList>
 
         <div>
-          <Typography variant="h5" > 
+          <Typography variant="h4" > 
             Combos
           </Typography>
-          <ul className='ordenes-list'>
-            <Pedido />
-            <Pedido />
-            <Pedido />
-          </ul>
+        <PedidosList
+            css={css`
+              align-self:center;  
+            `}
+          >
+            <li> <Pedido /> </li>
+            <li> <Pedido /> </li>
+            <li> <Pedido /> </li>
+          </PedidosList>
         </div>
-        <Button 
-
-            startIcon={<Done />}
-            variant="contained" 
-            onClick={()=>setPopup(true)}
-        >
-            <Typography variant="buttontext" >Confirmar</Typography>
-        </Button>
+        <ConfirmButton onClick={ ()=>setPopup(true) } > Confirmar </ConfirmButton>
       </div>
     </div>
   )

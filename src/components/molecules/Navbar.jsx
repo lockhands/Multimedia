@@ -33,6 +33,7 @@ function Navbar() {
         justify-content:space-between;
         align-items:center;
         background-color: #1D2334;
+        height:5rem;
         padding: 1rem;
         color:#FF8308;
         @media (max-width: 800px) {

@@ -10,15 +10,17 @@ const WorkerLayout = () => {
 			css={css`
 				.outlet-wrapper {
 					background-color: #0E1321;
-					height: calc(100vh - 56px - 1rem);   
+					min-height: calc(100vh - 56px - 1rem);   
+					margin-bottom: calc(56px + 1rem);
 					background-color: #0E1321;
 					color: white;
-					overflow-y:scroll;
+
 				}
 				
-				@media (min-width: 800px) {
+				@media (min-width: 801px) {
 					.outlet-wrapper {
-						height: 100vh;
+						min-height: calc(100vh - 5rem);
+						margin-bottom:0;	
 					}
 				}
 			`}
