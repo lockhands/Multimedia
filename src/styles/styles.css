@@ -26,7 +26,7 @@
     align-self: center;
     width:75%;
     height: 10%;
-    max-width: 300px;
+    /* max-width: 300px; */
 }
 
 .ardilla{
@@ -96,11 +96,6 @@ h4{
     max-width: 300px;
     color:yellow; 
 }
-
-
-
-
-
 
 
 .Layout-Pedidos{
