@@ -1,30 +1,54 @@
 import React from "react";
 
-import { Button, Typography } from "@mui/material";
+import { Button, css, Typography } from "@mui/material";
 import { useNavigate } from "react-router-dom";
-
-import '../../styles/Trabajador/Pedidos.css';
-
-import pedidoPhoto from '../../assets/pedido.webp'
-
 import Done from '@mui/icons-material/Done'
+
 
 import Layout from "../../components/molecules/Layout";
 import Pedido from "../../components/molecules/Pedido";
+import PedidosList from "../../components/molecules/PedidosList";
 
 function PedidosWorkers(){
    const navigate = useNavigate();
 
     return(
-        <div className="pedidos-pendientes" >
+        <div
+            css={css`
+                button {
+                    margin-top: 2.5rem;
+                    align-self:center ;
+                    padding: 0.8rem 3rem;
+                    font-weight: bold;
+                    background-color: #FF8308;
+                }
+                h4 {
+                    text-align: center;
+                    margin-bottom:1.5rem;
+                }
+                .content {
+                    background-color: #0E1321;
+                    padding: 2rem 7%;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-between;
+                }
+            `}
+        >
             <Layout nombre="Pedidos" link="/dashboard/HomeWorker" />
             <div className="content" >
                 <div>
-                    <Typography variant="h4" sx={{color:'white'}}>Pedidos pendientes:</Typography>
-                    <ul  className="pedidos-list">
-                        <Pedido />
-                        <Pedido />
-                    </ul>
+                    <Typography variant="h4">Pedidos pendientes:</Typography>
+                    <PedidosList>
+                        <li> <Pedido /> </li>
+                        <li> <Pedido /> </li>
+                        <li> <Pedido /> </li>
+                        <li> <Pedido /> </li>
+                        <li> <Pedido /> </li>
+                        <li> <Pedido /> </li>
+                    </PedidosList>
+
+                    
                 </div>
                 <Button 
                     startIcon={<Done />}

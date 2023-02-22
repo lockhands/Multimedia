@@ -5,13 +5,18 @@ function ConfirmPopup({onResolve}) {
   return (
     <div
         css={css`
-            height:100vh;
             position:fixed;
-            width:100%;
+            top:0;
+            bottom:0;
+            left:0;
+            right:0;
+            z-index:1000;
+            
+
             display:flex;
             justify-content:center;
             align-items:center;
-            z-index:1000;
+            
             
         `}
     >
@@ -20,8 +25,8 @@ function ConfirmPopup({onResolve}) {
                 background-color: #E05656;
                 border-radius:0.5rem;
                 width:100%;
-                margin: 0 3rem;
-                padding:1rem;
+                margin: 0 10%;
+                padding:1.5rem 1rem;
             `}
         >
             <div

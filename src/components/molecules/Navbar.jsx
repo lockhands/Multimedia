@@ -13,9 +13,9 @@ function NavigationLink({to,children}) {
     >    
       <h2
         css={css`
-          margin-left:0.8rem;
-          font-weight: normal;
-          font-size:1.3rem;
+          margin-left:1rem;
+          font-weight: bolder;
+          font-size:1.1rem;
         `}
       >
         {children}
@@ -28,34 +28,35 @@ function Navbar() {
   return (
     <div 
       css={css`
-        width:100%;
-        background-color: #db0000;
-        padding: 1rem;
         display:flex;
+        flex-direction:row;
         justify-content:space-between;
         align-items:center;
-        color:white;
-      `}
-    >
+        background-color: #1D2334;
+        height:5rem;
+        padding: 1rem;
+        color:#FF8308;
+        @media (max-width: 800px) {
+          display:none;
+				}
 
-      
-      <Box
-        css={css`
+        .left-side-header {
           display:flex;
           align-items:center;
-        `}
-      >
-        <div
-          css={css`
-            padding: 1rem;
-            height:5rem;
-            display:flex;
-            align-items:center;
-          `}
-        >
+        }
+
+        .logo-and-name {
+          display:flex;
+          align-items:center;
+        }
+
+      `}
+    >
+      <div className="left-side-header" >
+        <div className="logo-and-name">
           <img
             css={css`
-              max-height:100%;
+              width:2.5rem;
             `}
             src={LogoNoText}
             alt="logo"
@@ -63,26 +64,28 @@ function Navbar() {
 
           <span
             css={css`
-            margin-left:1.5rem;
-            font-weight: bolder;
-            font-size:1.3rem;
+              margin-left:0.5rem;
+              font-weight: bolder;
+              font-size:1rem;
             `}
           >
             CineWorld
           </span>
         </div>
         <Box
-          ml={4}
           css={css`
+            margin-left:2rem;
             display:flex;
             flex-direction:row;
           `}
         >
-          <NavigationLink to="/dashboard" > Menu Principal </NavigationLink>
-          <NavigationLink to="/dashboard/validate-boletos/scan"> Procesar Boletos </NavigationLink>
-          <NavigationLink to="/dashboard/validate-pedidos"> Procesar Pedidos  </NavigationLink>
+          <NavigationLink to="/dashboard/HomeWorker" > Menu Principal </NavigationLink>
+          <NavigationLink to="/dashboard/HomeWorker/validate-boletos"> Procesar Boletos </NavigationLink>
+          <NavigationLink to="/dashboard/HomeWorker/Pedidos"> Procesar Pedidos  </NavigationLink>
         </Box>
-      </Box>
+      </div>
+
+
       <div
         css={css`
           display:flex;
@@ -97,13 +100,6 @@ function Navbar() {
         > Jose Marquez </span>
         <AccountCircleIcon  fontSize='large' />
       </div>
-
-      
-
-
-      
-
-
     </div>
   )
 }
