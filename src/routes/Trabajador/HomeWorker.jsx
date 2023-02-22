@@ -5,31 +5,56 @@ import { useNavigate } from 'react-router-dom';
 import {ReactComponent as Food2} from '../../assets/icons/Food2.svg';
 import {ReactComponent as Ticket} from '../../assets/icons/Ticket3.svg';
 
-import '../../styles/Trabajador/home.css';
-
 function HomeWorker() {
-
   const navigate=useNavigate();
-
   return (
     
     <div
       css={css`          
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: space-between;
+
           @media (min-width: 800px) {
             .phone {
               display:none;
             } 
           }
+
+
+        
+
+          .home-worker-topside {
+            width:100%
+          }
+
+          h4 {
+            margin-top:0.8rem;
+            text-align:center;
+          }
+
+          .main-buttons {
+              display: flex;
+              flex-direction: column;
+              align-items: stretch;
+              align-self: stretch;
+              margin: 2rem 10%;
+
+              button {
+                width: 100%;
+                margin-bottom: 2.5rem;
+                padding:1rem 3rem;
+              }
+
+          }
+
       `}
-      className='home-worker'
     >
-      
       <div className='home-worker-topside'>
         <div className='home-worker-main phone'>
-          <Typography variant="h4" sx={{color:'white'}}>Cines Unidos</Typography>
+          <Typography variant="h4">Cines Unidos</Typography>
           <hr/>
-        </div>
-        <div className='main-dates-propio'>
         </div>
 
         <div
@@ -39,12 +64,14 @@ function HomeWorker() {
             display: flex;
             flex-direction: column;
             border: solid 1.5px #395CEA;
-            border-radius: 5%;
+            border-radius: 0.5rem;
             align-items: center;
             align-self: stretch;
             margin: 1rem min(5%,5rem);
             color:white;
+            margin-top:1.5rem;
             padding:2rem;
+
 
             h4 , h5 , span {
               margin-top:0.5rem;
