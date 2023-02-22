@@ -84,14 +84,8 @@ function HomeWorker() {
             <Typography variant="h4" >¡Bienvenida!</Typography>
             <Typography variant="h5" >Dahyana Nimo</Typography>
             <Typography variant="outlined" >V-123.456.789</Typography>
-
         </div>
-
       </div>
-
-
-              <h1>haber</h1>
-
       <div className='main-buttons'>
         <Button 
           startIcon={<Ticket />}

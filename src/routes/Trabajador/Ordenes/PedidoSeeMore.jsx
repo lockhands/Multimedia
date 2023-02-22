@@ -5,11 +5,14 @@ import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 
 
 import PedidoPhoto from '../../../assets/big-pedido.webp'
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 
 
 function PedidoSeeMore() {
+
+    const navigate = useNavigate()
+
   return (
     <div
         css={css`
@@ -79,8 +82,8 @@ function PedidoSeeMore() {
         `}
     >
         <div className='back-arrow' >
-            <Link  className="back-arrow-link" to="/dashboard/HomeWorker/ordenes">
-                <ArrowBackIcon sx={{color:'white',marginLeft:'0.5rem'}} />
+            <Link  className="back-arrow-link" onClick={()=>navigate(-1)}>
+                <ArrowBackIcon />
             </Link>
         </div>
         <img src={PedidoPhoto} alt="imagen de comida" />

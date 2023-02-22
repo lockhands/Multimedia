@@ -94,6 +94,9 @@ function PedidoDesktop() {
 }
 
 function PedidoPhone() {
+
+    const navigate = useNavigate()
+
     return (
         <div
             css={css`
@@ -163,14 +166,10 @@ function PedidoPhone() {
 }
 
 function Pedido() {
-
-    const navigate = useNavigate()
-
   return (
     <>
         <PedidoPhone />
         <PedidoDesktop />
-
     </>
   )
 }
