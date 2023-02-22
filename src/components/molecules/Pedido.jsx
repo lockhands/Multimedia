@@ -87,7 +87,7 @@ function PedidoDesktop() {
                 variant="contained" 
                 onClick={()=>setSeeMore(!seeMore)}
             >
-                <Typography variant="buttontext" >Ver mas</Typography>
+                <Typography variant="buttontext" > {  seeMore ? "Ver Menos" : "Ver Mas" }  </Typography>
             </Button>
         </div>
     )
