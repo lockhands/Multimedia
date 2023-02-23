@@ -1,73 +1,127 @@
 import React from "react";
-import { Typography } from "@mui/material";
+import { css, Typography } from "@mui/material";
 import Layout from "../../components/molecules/Layout";
-import Pantalla from './Pantalla.png';
-import '../../styles/Puestos/puestos.css';
+import Pantalla from '../../assets/Pantalla.png';
+
+function PuestosRow( {amount = 1,align = 'center',active = []} ) {
+    return (
+        <div
+            css={css`
+                display:flex;
+                justify-content: ${align};
+                width:100%;
+
+            `}
+        >
+            {
+                Array(amount).fill(null).map( (_,idx) => (
+                    <div for={idx} className={active.includes(idx) ? 'active puesto' : 'puesto'}></div>
+                ) )
+
+            }
+
+        </div>
+    )
+}
 
 function PuestosCliente() {
-    const array1=[];
-    const array2=[];
-    for(let i=1;i<=30;i++) array1.push(i);
-    for(let i=31;i<=60;i++) array2.push(i);
-
-    console.log(array2);
     return(
-        <div class="Main">
-           
-           <Layout nombre="Boletos" link="/cliente/tickets" />
+        <div
+            css={css`
+                height: calc(100vh - 56px - 1rem);
+                overflow-y:scroll;
+                display:flex;
+                flex-direction:column;
 
-        <div className="puesto-tickets">
-
-        <div className="puesto-lobo">
-
-            <div className="puesto-container-header">
-
-            
-            <Typography variant="h6" sx={{color:'white'}}>
-               
-            </Typography>
-            </div>
-            <div className="puesto-oso">
-                <img src={Pantalla}>
-                
-                </img>
-            </div>
-
-            <div className="puestos-container-c">
-                <div className="puestos-container-1">  
-                    {
-                    array1.map( el => (
-                        <div key={el} id={`div-${el}`} className="listop">
-                            <Typography xs={{color:'white'}}></Typography>
-                        </div>
-                    ))
-                    } 
-                
-                </div>
-                <div className="puestos-container-2"> 
-                {
-                    array2.map( el => (
-                        <div key={el.value} id={`div-${el}`} className="listop">
-                            <Typography xs={{color:'white'}}></Typography>
-                        </div>
-                    ))
+                .puesto {
                     
-                     } 
-                      </div>
-                      
-            </div>
+                    width: min(7vw,2em);
+                    border: white 1px solid;
+                    border-radius: min( 3vw, 0.85rem );
+                    height: min(7vw,2em);
+                    margin: 0.3rem;
+                }
 
-            <div className="puesto-container-label">
-                <div className="puesto-container-label-1">
-                    <div className="puesto-container-label-1-item"></div>
-                    <Typography sx={{color:'#FF8308'}}>Puestos elegidos</Typography>
+                .active {
+                    background-color:#FF8308;
+                    border-color:#FF8308;
+                }
+
+            `}
+        >
+           <Layout onPhone={true} nombre="Tickets" />
+            <div
+                css={css`
+                    flex-grow:1;
+                    background-color: #0E1321;
+
+                    img {
+                        margin-top:2.5rem;
+                    }
+
+                `}
+            >
+                <div
+                    css={css`
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                    `}
+                >
+                    <img src={Pantalla} alt="pantalla image" />
+
+                    <div
+                        css={css`
+                            display:grid;
+                            margin-top:1.5rem;
+                            grid-template-columns: 1fr 1fr;
+                            column-gap: min(5vw,2rem);
+                        `}
+                    >
+                        <div>
+                            <PuestosRow amount={3} align="flex-end" />
+                            <PuestosRow amount={4}  />
+                            <PuestosRow amount={4}  />
+                            <PuestosRow amount={4}  />
+                            <PuestosRow amount={4}  />
+                            <PuestosRow amount={4}  />
+                            <PuestosRow amount={4}  />
+                            <PuestosRow amount={3} align="flex-end" />
+
+                        </div>
+                        <div>
+                            <PuestosRow amount={3} align="flex-start" />
+                            <PuestosRow amount={4}  />
+                            <PuestosRow amount={4} active={[0,1]}  />
+                            <PuestosRow amount={4}  />
+                            <PuestosRow amount={4}  />
+                            <PuestosRow amount={4}  />
+                            <PuestosRow amount={4}  />
+                            <PuestosRow amount={3} align="flex-start" />
+                        </div>
+                    </div>
+
+
+
+                    <div
+                        css={css`
+                            display:flex;
+                            align-items:center;
+                            margin-top:1.5rem;
+
+                            p {
+                                margin-left:1rem;
+                                color : #FF8308;
+                                font-size:1.2rem;
+                                font-weight:bold;
+                            }
+                        `}
+                    >
+                        <div className="puesto active"></div>
+                        <Typography>Puestos elegidos</Typography>
+                    </div>
                 </div>
             </div>
-            
-        </div>
-      
-         
-</div>
         </div>
     )
 }

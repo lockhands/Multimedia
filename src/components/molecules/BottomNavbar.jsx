@@ -6,6 +6,7 @@ import { ReactComponent as Ticket } from "../../assets/icons/Ticket.svg";
 import { useNavigate } from "react-router-dom";
 
 function BottomNavbar(props) {
+
 	const styles={
 		navbar:{
 			background:'#1D2334',
@@ -34,7 +35,7 @@ function BottomNavbar(props) {
 		<Paper
 			css={css`
 				@media (min-width: 801px) {
-					display:none;
+					${ props.isPhone ? '' : 'display:none;' }
 				}
 				border-radius:0;
 				background-color:#1D2334;
