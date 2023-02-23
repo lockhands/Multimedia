@@ -5,7 +5,7 @@ import { useNavigate } from 'react-router-dom'
 import pedidoPhoto from '../../assets/pedido.webp'
 
 
-function PedidoDesktop() {
+function PedidoDesktop({ name = 'Tequeños' ,onPhone}) {
 
     const [seeMore,setSeeMore] = useState(false)
 
@@ -13,12 +13,14 @@ function PedidoDesktop() {
         <div
             css={css`
                 display:flex;
+                ${ onPhone && 'display:none;' }
                 flex-direction:column;
                 justify-content:center;
                 align-items:center;
                 align-items:center;
 
                 @media (max-width: 800px) {
+                    
                     display:none;
                 }
                 .cantidad {
@@ -81,7 +83,7 @@ function PedidoDesktop() {
 
 
             }
-            <Typography className='name'>Tequeños</Typography>
+            <Typography className='name'>{name}</Typography>
             <Typography className='cantidad' >2 cantidad</Typography>
             <Button
                 variant="contained" 
@@ -93,7 +95,7 @@ function PedidoDesktop() {
     )
 }
 
-function PedidoPhone() {
+function PedidoPhone({name = 'Tequeños',onPhone}) {
 
     const navigate = useNavigate()
 
@@ -110,7 +112,8 @@ function PedidoPhone() {
                 margin: 0.6rem 0rem;
                 padding: 1rem;
                 @media (min-width: 801px) {
-                    display:none;
+                    ${ !onPhone && 'display:none;' }
+                    
                 }
             `}
         >
@@ -134,7 +137,7 @@ function PedidoPhone() {
                         justify-content: space-between;
                     `}
                 >
-                    <Typography variant="h6">Tequeños</Typography>
+                    <Typography variant="h6">{name}</Typography>
                     <div>
                         <div
                             css={css`
@@ -165,11 +168,11 @@ function PedidoPhone() {
     )
 }
 
-function Pedido() {
+function Pedido({name = 'Tequeños',onPhone = false}) {
   return (
     <>
-        <PedidoPhone />
-        <PedidoDesktop />
+        <PedidoPhone  onPhone={onPhone} name={name} />
+        <PedidoDesktop onPhone={onPhone} name={name} />
     </>
   )
 }
