@@ -10,6 +10,7 @@ import imagen1 from './css/savoychocos.jpg'
 import imagen2 from './css/megacombo.jpg'
 import PedidosList from '../../components/molecules/PedidosList';
 import Pedido from '../../components/molecules/Pedido';
+import TabButtons from '../../components/atoms/TabButtons';
 
 
 function PedidosCliente() {
@@ -43,39 +44,18 @@ function PedidosCliente() {
           padding:0;
           align-self:stretch;
         `}>
+          
           <div
             css={css`
-              border-radius: 0.5rem;
               margin: 2rem 2rem 1rem;
-              background-color:#2E3445;
-              display:grid;
-              grid-template-columns: 1fr 1fr;
-
-              button {
-                padding : 0.2rem 0;
-                font-size:1.2rem;
-                text-align:center;
-              }
-
-              .active {
-                background-color:#1A202E;
-                color:#7BD7B8;
-              }
-
-              .left-btn {
-                border-radius: 0.5rem 0 0 0.5rem;
-              }
-
-              .right-btn {
-                border-radius: 0rem 0.5rem 0.5rems 0rem;
-              }
-
             `}
           >
-            <button onClick={()=>setTab(0)} className={`${ tab == 0 ? 'active ' : ' '}left-btn`} > Disponible </button>
-            <button onClick={()=>setTab(1)} className={`${ tab == 1 ? 'active ' : ' '}right-btn`} > No Disponible </button>
+            <TabButtons
+              onChange={ (t) => setTab(t)}
+              labels={['Disponible','Pendientes']} 
+              defaultTab={1}
+            />
           </div>
-
           <div
             css={css`
               padding: 0 2rem;  

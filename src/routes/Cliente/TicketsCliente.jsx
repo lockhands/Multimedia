@@ -129,7 +129,7 @@ function TicketsCliente() {
                     <Typography>Boletos</Typography>
                 </button>  
                 <button className='tab-btn'>
-                    <Typography>Boletos</Typography>
+                    <Typography>Historial</Typography>
                 </button>   
             </div>
         </div>

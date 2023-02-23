@@ -2,6 +2,8 @@ import React from "react";
 import { css, Typography } from "@mui/material";
 import Layout from "../../components/molecules/Layout";
 import Pantalla from '../../assets/Pantalla.png';
+import TabButtons from "../../components/atoms/TabButtons";
+import { useNavigate } from "react-router-dom";
 
 function PuestosRow( {amount = 1,align = 'center',active = []} ) {
     return (
@@ -15,7 +17,7 @@ function PuestosRow( {amount = 1,align = 'center',active = []} ) {
         >
             {
                 Array(amount).fill(null).map( (_,idx) => (
-                    <div for={idx} className={active.includes(idx) ? 'active puesto' : 'puesto'}></div>
+                    <div key={idx} className={active.includes(idx) ? 'active puesto' : 'puesto'}></div>
                 ) )
 
             }
@@ -25,6 +27,9 @@ function PuestosRow( {amount = 1,align = 'center',active = []} ) {
 }
 
 function PuestosCliente() {
+
+    const navigate = useNavigate()
+
     return(
         <div
             css={css`
@@ -50,17 +55,37 @@ function PuestosCliente() {
             `}
         >
            <Layout onPhone={true} nombre="Tickets" />
+
+
+
             <div
                 css={css`
                     flex-grow:1;
                     background-color: #0E1321;
 
                     img {
-                        margin-top:2.5rem;
+                        margin-top:1.5rem;
                     }
 
                 `}
             >
+
+                <div 
+                    css={css`
+                        margin:2rem 2rem 0;
+                    `}
+                >   
+                    <TabButtons
+                        labels={['Puestos','Codigo QR']}
+                        onChange={ ( t ) => {
+                            if(t == 1) {
+                                navigate('/cliente/tickets/qr')
+                            }
+                        } }
+                        defaultTab={0}
+                    />
+                </div>
+
                 <div
                     css={css`
                         display: flex;

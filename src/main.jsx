@@ -36,7 +36,9 @@ const router = createBrowserRouter([
 	},
 	{
 		path: "/dashboard",
+		
 		element: <WorkerLayout />,
+
 		children: [
 			{ path: "HomeWorker", element: <HomeWorker /> },
 			{ path: "HomeWorker/validate-boletos", element: <BoletosWorker /> },

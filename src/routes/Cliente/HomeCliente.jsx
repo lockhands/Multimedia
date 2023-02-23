@@ -2,7 +2,8 @@ import React from 'react'
 import { css } from '@emotion/react'
 import {Typography,Button} from '@mui/material';
 
-import { ShoppingCartOutlined } from '@mui/icons-material';
+import { ShoppingCartOutlined,Logout } from '@mui/icons-material';
+import { useNavigate } from 'react-router-dom';
 
 function Pedido() {
   return (
@@ -37,7 +38,10 @@ function Pedido() {
   )
 }
 
-function HomeCliente (){
+function HomeCliente () {
+
+  const navigate = useNavigate()
+
   return(          
     <div
       css={css`
@@ -50,16 +54,38 @@ function HomeCliente (){
         overflow-y:scroll;
         margin-bottom: calc(1rem + 56px);
         
-        h4 {
-          padding-top:0.5rem;
+        .header {
+          position:relative;
+          display:flex;
           width:100%;
-          text-align:center;
+          justify-content:center;
+          align-items:center;
+          padding-top:0.5rem;
           border-bottom: white 1px solid;
+          h4 {
+            font-size: min(8vw,1.8rem);
+
+            text-align:center;
+          }
+          svg {
+            position:absolute;
+            font-size:1.8rem;
+            color:#DEBF4E;
+            left:0;
+            transform: scale(1,1) scale(-1,1);
+            font-size:1.8rem;
+          }
         }
       `}
     >
 
-      <Typography variant="h4" >CINES UNIDOS</Typography>
+      <div className='header'>
+
+        <Logout onClick={()=> navigate('/login/cliente') }  />
+        <Typography variant="h4" >
+          CINES UNIDOS
+        </Typography>
+      </div>
 
       <div
         css={css`
