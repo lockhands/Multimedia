@@ -22,7 +22,7 @@ function Scanner({direccion}) {
   const handleScan = (result) => {
     
     
-        navigate(`HomeWorker/validate-boletos/info`);
+        navigate(`/info`);
     
     
   };
