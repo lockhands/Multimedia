@@ -14,6 +14,16 @@ ul {
     margin: 0;
 }
 
+button {
+    background: none;
+	color: inherit;
+	border: none;
+	padding: 0;
+	font: inherit;
+	cursor: pointer;
+	outline: inherit;
+}
+
 .validate-boletos-container .info-element ul li {
     margin-left: 1rem;
     color:white;
@@ -26,14 +36,16 @@ ul {
     display: inline-flex;
 }
 
-
 a {
     text-decoration:none;
     color:inherit;
 }
 
-* {
-    font-family: sans-serif;
+.MuiButtonBase-root {
+    text-transform: none  !important;
+}
 
+* {
+    font-family: 'Roboto', sans-serif;
     box-sizing: border-box;
 }

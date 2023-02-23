@@ -1,18 +1,10 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import ClientLayout from "././routes/Cliente/ClientLayout";
-import WorkerLayout from "././routes/WorkerLayout";
-
-import "./index.css";
-
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
-import Login from "./routes/Login";
-import BoletosScanner from "./routes/BoletosScaner";
-import ValidateBoletos from "./routes/ValidateBoletos";
+
+
 import HomeWorker from "./routes/Trabajador/HomeWorker";
-import OrdersScanner from "./routes/OrdersScanner";
-import Dashboard from "./routes/Dashboard";
 import HomeCliente from "./routes/Cliente/HomeCliente";
 import PedidosCliente from "./routes/Cliente/PedidosCliente";
 import TicketsCliente from "./routes/Cliente/TicketsCliente";
@@ -26,6 +18,13 @@ import BoletosInfo from "./routes/Trabajador/BoletosInfo";
 import PedidosWorkers from "./routes/Trabajador/PedidosWorkers";
 import PedidosScan from "./routes/Trabajador/PedidosScan";
 import PuestosCliente from "./routes/Cliente/PuestosCliente";
+import Ordenes from "./routes/Trabajador/Ordenes/Ordenes";
+import PedidoSeeMore from "./routes/Trabajador/Ordenes/PedidoSeeMore";
+
+import ClientLayout from "././routes/Cliente/ClientLayout";
+import WorkerLayout from "././routes/WorkerLayout";
+
+import "./index.css";
 
 const router = createBrowserRouter([
 	{
@@ -34,13 +33,17 @@ const router = createBrowserRouter([
 	},
 	{
 		path: "/dashboard",
+		
 		element: <WorkerLayout />,
+
 		children: [
 			{ path: "HomeWorker", element: <HomeWorker /> },
 			{ path: "HomeWorker/validate-boletos", element: <BoletosWorker /> },
 			{ path: "HomeWorker/validate-boletos/info", element: <BoletosInfo />},
 			{ path: "HomeWorker/Pedidos", element:<PedidosWorkers />},
 			{ path: "HomeWorker/Pedidos/scanner",element:<PedidosScan /> },
+			{ path: "HomeWorker/ordenes",element:<Ordenes /> },
+			{ path: "HomeWorker/ordenes/see-more",element:<PedidoSeeMore /> },
 		],
 	},
 	

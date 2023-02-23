@@ -9,7 +9,6 @@ function Logo() {
   return (
     <div
         css={css`
-            background-color:red;
             display:flex;
             justify-content:center;
             width:250px;
