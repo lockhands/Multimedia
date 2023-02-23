@@ -21,6 +21,8 @@ function Scanner({direccion}) {
 
   const handleScan = (result) => {
     
+    console.log(result);
+    
     if(result){
         navigate(`${direccion}`)
     }
