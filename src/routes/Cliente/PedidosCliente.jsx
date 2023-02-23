@@ -1,7 +1,5 @@
 import React, { useState } from 'react'
-import {  Box, Button, Tab, Tabs, Typography } from '@mui/material';
 import { css } from '@emotion/react'
-import AssignmentIcon from '@mui/icons-material/Assignment';
 import LayoutSuperior from '../../components/molecules/LayoutSuperiorPedidos';
 import './css/card1.css'
 
@@ -12,6 +10,7 @@ import PedidosList from '../../components/molecules/PedidosList';
 import Pedido from '../../components/molecules/Pedido';
 import TabButtons from '../../components/atoms/TabButtons';
 
+import pedidos from '../../data/pedidos';
 
 function PedidosCliente() {
 
@@ -63,18 +62,18 @@ function PedidosCliente() {
             `}
           >            
             <PedidosList hidden={tab != 0 } onPhone={true}>
-                <li><Pedido onPhone={true} /></li>
-                <li><Pedido onPhone={true} /></li>
-                <li><Pedido onPhone={true} /></li>
-                <li><Pedido onPhone={true} /></li>
-                <li><Pedido onPhone={true} /></li>
+                {
+                  pedidos.map( (p,idx) => ( 
+                    <li key={idx}  ><Pedido onPhone={true} imgSource={p.img} name={p.name} /></li>  
+                  ))
+                }
             </PedidosList>
             <PedidosList hidden={tab != 1 } onPhone={true}>
-                <li><Pedido onPhone={true} name="Palomitas" /></li>
-                <li><Pedido onPhone={true} name="Palomitas" /></li>
-                <li><Pedido onPhone={true} name="Palomitas" /></li>
-                <li><Pedido onPhone={true} name="Palomitas" /></li>
-                <li><Pedido onPhone={true} name="Palomitas" /></li>
+                {
+                  pedidos.reverse().map( (p,idx) => ( 
+                    <li key={idx}  ><Pedido onPhone={true} imgSource={p.img} name={p.name} /></li>  
+                  ))
+                }
             </PedidosList>
           </div>
 
