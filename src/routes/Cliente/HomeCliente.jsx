@@ -62,9 +62,9 @@ function HomeCliente () {
           align-items:center;
           padding-top:0.5rem;
           border-bottom: white 1px solid;
+          
           h4 {
             font-size: min(8vw,1.8rem);
-
             text-align:center;
           }
           svg {

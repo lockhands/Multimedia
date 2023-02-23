@@ -3,26 +3,56 @@ import { css, Typography } from "@mui/material";
 import { Link, useNavigate } from "react-router-dom";
 import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 
-import '../../styles/main-layout.css'
-
 function Layout({nombre,link,onPhone}) {
 
     const navigate = useNavigate()
 
+    const handleClick = () => {
+
+        console.log('xxxx')
+
+        if(! link ) {
+            console.log(link)
+            navigate('/')
+        } else {
+            navigate(-1)
+        }
+    }
+
     return(
         <div
             css={css` 
+                justify-content: flex-start;
+                align-items: center;
+                height: 8vh;
+                background-color: #30374B;
+
                 ${ onPhone ? 'display:flex;' : 'display:none;' } 
                 @media (max-width: 800px) {
                     display:flex;
                 }
+
+                a {
+                    display:flex;
+                }
+
+                svg {
+                    margin-left:0.6rem;
+                    font-size:1.8rem;
+                    align-self:stretch;
+                }
+
+                h5 {
+                    padding-left:1.2rem;
+                    margin:0;
+                }
             `}
-            className="main-layout"
+
         >
-            <Link  className="back-arrow-link" onClick={ ()=> navigate(-1) }>
-                <ArrowBackIcon sx={{color:'white',marginLeft:'0.5rem'}} />
+            <Link onClick={ handleClick }>
+                <ArrowBackIcon />
             </Link>
-            <Typography variant="h5"  sx={{color:'white', paddingLeft: '5%'}}>{nombre}</Typography>
+            <Typography variant="h5" >{nombre}</Typography>
         </div>
     )
 }

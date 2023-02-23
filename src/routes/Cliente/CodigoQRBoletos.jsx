@@ -19,7 +19,7 @@ function CodigoQRBoletos () {
                 background-color: #0E1321;
             `}
         >
-           <Layout onPhone={true} nombre="Tickets" />
+           <Layout onPhone={true} nombre="Tickets" link="/cliente/tickets" />
             <div
                 css={css`
                     padding:2rem;

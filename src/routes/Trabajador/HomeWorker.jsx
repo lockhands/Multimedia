@@ -117,7 +117,7 @@ function HomeWorker() {
         <Button 
           startIcon={<Ticket />}
           variant="contained" 
-          onClick={() => navigate("validate-boletos/info")}
+          onClick={() => navigate("validate-boletos")}
         >
           <Typography variant="buttontext" >Procesar Boletos</Typography>
         </Button>

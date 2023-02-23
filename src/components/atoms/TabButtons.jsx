@@ -11,15 +11,16 @@ function TabButtons({
 
     return (
         <div
+            className='tab-buttons'
             css={css`
                 border-radius: 0.5rem;
                 background-color:#2E3445;
                 display:grid;
                 grid-template-columns: repeat(${labels.length},1fr);
 
-                button {
+                button.tab-btn {
                     padding : 0.2rem 0;
-                    font-size:1.2rem;
+                    font-size:1.2rem ;
                     text-align:center;
                 }
 
@@ -49,15 +50,16 @@ function TabButtons({
                     const middle = idx != 0 && idx != labels.length -1 ? 'middle' : ''
                     const last = idx == labels.length -1 ? 'last ' : ''
                     const active = idx == tab ? 'active ' : ''
-
+                    
                     return (
                         <button
+
                             key={idx}
                             onClick={()=>{
                                 setTab( idx )
                                 onChange(idx)
                             }}
-                            className={ [first,last,active,middle].join('') }
+                            className={ [first,last,active,middle,'tab-btn'].join('') }
                         >
                             {label}
                         </button>

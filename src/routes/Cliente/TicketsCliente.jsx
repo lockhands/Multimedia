@@ -96,20 +96,27 @@ function TicketsCliente() {
             overflow-y:scroll;
 
             .content-header {
+
+                height: 8vh;
                 width:100%;
                 background-color:#30374B;
                 display: flex;
+                align-items:centel;
                 justify-content:space-between;
                 h1 {
-                    font-size:1.8rem;
+                    display:flex;
+                    justify-content:center;
+                    align-items:center;
+                    font-size:1.4rem;
                     margin:0;
-                    padding: 0.2rem 1rem;
+                    margin-left:0.8rem;
                 }
                 .tab-btns-cotnainer {
                     display:flex;
                     align-items:flex-end;
                     .tab-btn {
-                        padding:0.5rem 1.2rem;
+                        font-size:0.9rem;
+                        padding:0.3rem 1.2rem;
                         border-radius : 0.5rem 0.5rem 0 0;
                         background-color:#505B77;
                     }
