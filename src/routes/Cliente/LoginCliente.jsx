@@ -10,20 +10,10 @@ import { useNavigate } from 'react-router-dom';
 
 const Root = styled('div')(({ theme }) => ({
     padding: theme.spacing(1),
-    [theme.breakpoints.down('md')]: {
-       
     display:'flex',
     flexDirection: 'column',
     alignItems:'center',
     justifyContent:'center',
-   
-    },
-    [theme.breakpoints.up('lg')]: {
-        display:'flex',
-    flexDirection: 'column',
-    alignItems:'center',
-    justifyContent:'center',
-    },
   }));
 
 

@@ -13,6 +13,7 @@ function LayoutSuperiorPedidos({nombre}){
         <div
 
             css={css`
+                height: 8vh;
                 padding: 0.6rem 1rem;
                 width:100%;
                 background-color:#30374B;
@@ -30,12 +31,12 @@ function LayoutSuperiorPedidos({nombre}){
                     justify-content:center;
                     align-items:center;
                     color:#D9D9D9;
-                    padding:0.4rem 0.8rem;
+                    padding:0.2rem 0.4rem;
                     border-radius: 0.5rem;
                     border: solid 1px #D9D9D9;
                     
                     p {
-                        font-size:1rem;
+                        font-size:0.8rem;
                     }
 
                     svg {

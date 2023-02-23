@@ -4,6 +4,7 @@ import { useNavigate } from 'react-router-dom';
 
 import {ReactComponent as Food2} from '../../assets/icons/Food2.svg';
 import {ReactComponent as Ticket} from '../../assets/icons/Ticket3.svg';
+import { Logout } from '@mui/icons-material';
 
 function HomeWorker() {
   const navigate=useNavigate();
@@ -29,9 +30,31 @@ function HomeWorker() {
             width:100%
           }
 
-          h4 {
-            margin-top:0.8rem;
-            text-align:center;
+          .header {
+            position:relative;
+            display:flex;
+            width:100%;
+            justify-content:center;
+            align-items:center;
+            padding-top:0.5rem;
+            border-bottom: white 1px solid;
+            h4 {
+              font-size: min(8vw,1.8rem);
+  
+              text-align:center;
+            }
+            svg {
+              position:absolute;
+              font-size:1.8rem;
+              color:#DEBF4E;
+              left:0;
+              transform: scale(1,1) scale(-1,1);
+              font-size:1.8rem;
+            }
+          }
+
+          .home-worker-main {
+            margin:0 2rem;
           }
 
           .main-buttons {
@@ -53,8 +76,12 @@ function HomeWorker() {
     >
       <div className='home-worker-topside'>
         <div className='home-worker-main phone'>
-          <Typography variant="h4">Cines Unidos</Typography>
-          <hr/>
+        <div className='header'>
+          <Logout onClick={()=> navigate('/login/trabajador') } />
+          <Typography variant="h4" >
+            CINES UNIDOS
+          </Typography>
+        </div>
         </div>
 
         <div
@@ -90,7 +117,7 @@ function HomeWorker() {
         <Button 
           startIcon={<Ticket />}
           variant="contained" 
-          onClick={() => navigate("validate-boletos/info")}
+          onClick={() => navigate("validate-boletos")}
         >
           <Typography variant="buttontext" >Procesar Boletos</Typography>
         </Button>

@@ -6,11 +6,10 @@ import Navbar from '../components/molecules/Navbar'
 function ValidateBoletos() {
   return (
     <div className='validate-boletos-container' >
-        <Navbar></Navbar>
+        <Navbar />
         <div
             css={css`
                 padding:2rem 4rem;
-
             `}
         >
             <h1> Informacion de Boletos </h1>
