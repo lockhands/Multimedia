@@ -127,7 +127,7 @@ function HomeWorker() {
         <Button
           startIcon={<Food2 />}
           variant="contained"
-          onClick={() => navigate("Pedidos") }
+          onClick={() => navigate("/dashboard/HomeWorker/Pedidos/scanner") }
         >
             <Typography variant="buttontext" >Procesar Pedidos</Typography>
         </Button>

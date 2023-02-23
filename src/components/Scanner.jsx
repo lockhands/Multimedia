@@ -4,27 +4,15 @@ import React, {
 } from "react";
 import QrReader from "react-web-qr-reader";
 import { useNavigate } from 'react-router-dom';
-import '../styles/origin.css';
+import { css } from "@emotion/react";
 
 function Scanner({direccion}) {
 
-    const navigate=useNavigate();
+  const navigate=useNavigate();
 
   const delay = 500;
-
-  const previewStyle = {
-    height: 240,
-    width: 320
-  };
-
-  const [result, setResult] = useState("No result");
-
   const handleScan = (result) => {
-    
-    
-        navigate(`info`);
-    
-    
+    navigate(direccion);
   };
 
   const handleError = (error) => {
@@ -33,14 +21,33 @@ function Scanner({direccion}) {
 
 
   return (
-    <div className="Principiol">
-    <QrReader
-      delay={delay}
-      style={previewStyle}
-      onError={handleError}
-      onScan={handleScan}
-    />
-  </div >
+    <div
+      css={css`
+        display:flex;
+        flex-direction:column;
+        justify-content:center;
+        align-items:center;
+
+        @media (max-width: 800px) {
+          h1 {
+            display:none;
+          }
+				}
+
+      `}
+    >
+
+      <h1> Escaneador de Codigo QR </h1>
+
+      <QrReader
+        delay={delay}
+        style={{
+          width:'min(25rem,100vw)'
+        }}
+        onError={handleError}
+        onScan={handleScan}
+      />
+    </div >
   )
 }
 
