@@ -21,9 +21,9 @@ function Scanner({direccion}) {
 
   const handleScan = (result) => {
     
-    if(result){
-        navigate(`${direccion}`)
-    }
+    
+        navigate(`info`);
+    
     
   };
 
