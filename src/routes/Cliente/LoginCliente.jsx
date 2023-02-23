@@ -49,42 +49,46 @@ function LoginCliente() {
         navigate('/cliente/home');
     }
 
-  return (
-    <div
-        css={css`
-            display:flex;
-            justify-content:center;
-            align-items:center;
-            height:100vh;
-            background-color:#0E1321;
-        `}
-    >
-        <form
-            css={css`
-                width: 25rem;
-                display:flex;
-                flex-direction:column;
-                bottom:7rem;
-                position:relative;
-            `}
-        >
-            <div css={css`
-                display:flex;
-                align-items:center;
-                justify-content:center;
-            `}>
+    return (
+      <div
+          css={css`
+              display:flex;
+              justify-content:center;
+              align-items:center;
+              height:100vh;
+          `}
+      >
+          <form
+              css={css`
+                  width: 25rem;
+                  display:flex;
+                  flex-direction:column;
+                  bottom:7rem;
+                  position:relative;
+              `}
+          >
+              <div css={css`
+                  display:flex;
+                  align-items:center;
+                  justify-content:center;
+              `}>
+                  <Logo></Logo>
+              </div>
+  
+  
+             
+         
+          <Root>
+              <TextField label="Correo electronico" variant="outlined"></TextField>
+              <Box mb={2} ></Box>
+              <TextField  label="Contraseña" variant="outlined" />
+              <Box mb={2} ></Box>
+              <Button variant="contained" onClick={handleClick}> Iniciar Seccion</Button>
               
-            </div>
-
-
-           
-       
-            <ThemeProvider theme={theme}>
-      <TextField></TextField>
-    </ThemeProvider>
-       
-        </form> 
-    </div>
+          </Root>
+         
+          </form> 
+      </div>
   )
 }
 
