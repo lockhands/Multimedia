@@ -9,6 +9,8 @@ import Layout from "../../components/molecules/Layout";
 import Pedido from "../../components/molecules/Pedido";
 import PedidosList from "../../components/molecules/PedidosList";
 
+import pedidos from "../../data/pedidos";
+
 function PedidosWorkers(){
    const navigate = useNavigate();
 
@@ -40,12 +42,11 @@ function PedidosWorkers(){
                 <div>
                     <Typography variant="h4">Pedidos pendientes:</Typography>
                     <PedidosList>
-                        <li> <Pedido /> </li>
-                        <li> <Pedido /> </li>
-                        <li> <Pedido /> </li>
-                        <li> <Pedido /> </li>
-                        <li> <Pedido /> </li>
-                        <li> <Pedido /> </li>
+                        {
+                            pedidos.map( (p,idx) => ( 
+                                <li key={idx}  ><Pedido imgSource={p.img} name={p.name} /></li>  
+                            ))
+                        }
                     </PedidosList>
 
                     

@@ -8,6 +8,7 @@ import ConfirmPopup from '../../../components/molecules/ConfirmPopup'
 import PedidosList from '../../../components/molecules/PedidosList'
 import ConfirmButton from '../../../components/atoms/ConfirmButton'
 
+import pedidos from '../../../data/pedidos'
 
 function Ordenes() {
 
@@ -32,11 +33,11 @@ function Ordenes() {
           }
 
           h4 {
-            margin:1rem 0;
+            margin:0.5rem 0;
           }
 
           .main-content {
-            padding: 1rem;
+            padding: 2rem;
           }
           @media (min-width: 800px) {
             padding: 1.5rem 3rem;
@@ -61,9 +62,11 @@ function Ordenes() {
               align-self:center;  
             `}
           >
-            <li> <Pedido /> </li>
-            <li> <Pedido /> </li>
-            <li> <Pedido /> </li>
+            {
+                pedidos.slice(0,3).map( (p,idx) => ( 
+                    <li key={idx}  ><Pedido imgSource={p.img} name={p.name} /></li>  
+                ))
+            }
           </PedidosList>
 
         <div>
@@ -75,9 +78,11 @@ function Ordenes() {
               align-self:center;  
             `}
           >
-            <li> <Pedido /> </li>
-            <li> <Pedido /> </li>
-            <li> <Pedido /> </li>
+            {
+                pedidos.slice(0,3).map( (p,idx) => ( 
+                    <li key={idx}  ><Pedido imgSource={p.img} name={p.name} /></li>  
+                ))
+            }
           </PedidosList>
         </div>
         <ConfirmButton onClick={ ()=>setPopup(true) } > Confirmar </ConfirmButton>
