@@ -5,6 +5,7 @@ import { useNavigate } from 'react-router-dom';
 import {ReactComponent as Food2} from '../../assets/icons/Food2.svg';
 import {ReactComponent as Ticket} from '../../assets/icons/Ticket3.svg';
 import { Logout } from '@mui/icons-material';
+import Scanner from '../../components/Scanner';
 
 function HomeWorker() {
   const navigate=useNavigate();
@@ -74,6 +75,8 @@ function HomeWorker() {
 
       `}
     >
+
+
       <div className='home-worker-topside'>
         <div className='home-worker-main phone'>
         <div className='header'>

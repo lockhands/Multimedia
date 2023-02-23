@@ -1,6 +1,7 @@
 import React from "react";
 import Layout from "../../components/molecules/Layout";
 import { Button, Typography } from "@mui/material";
+import Scanner from "../../components/Scanner";
 function PedidosScan(){
     return(
         
@@ -15,6 +16,7 @@ function PedidosScan(){
 
      </div>
 
+            <Scanner direccion={"/dashboard/HomeWorker/validate-boletos"} />
 
             <div className="view-tickets">
                         <div className="container-contorno-aviso">

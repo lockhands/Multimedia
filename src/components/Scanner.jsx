@@ -1,9 +1,10 @@
-import './App.css'
+
 import React, {
   useState
 } from "react";
 import QrReader from "react-web-qr-reader";
 import { useNavigate } from 'react-router-dom';
+import '../styles/origin.css';
 
 function Scanner({direccion}) {
 
@@ -32,15 +33,14 @@ function Scanner({direccion}) {
 
 
   return (
-    <>
+    <div className="Principiol">
     <QrReader
       delay={delay}
       style={previewStyle}
       onError={handleError}
       onScan={handleScan}
     />
-    <p>{result}</p>
-  </>
+  </div >
   )
 }
 
