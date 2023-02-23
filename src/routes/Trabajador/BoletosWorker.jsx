@@ -1,24 +1,23 @@
 import React from "react";
-import { Button, Typography } from "@mui/material";
+import { Button, css, Typography } from "@mui/material";
 import { useNavigate } from "react-router-dom";
 import Scanner from "../../components/Scanner";
 import '../../styles/Trabajador/Scan.css';
 import Layout from "../../components/molecules/Layout";
 
 function BoletosWorker(){
-    const navigate=useNavigate();
+    const navigate = useNavigate();
     return(
-        <div>
+        <div
+            css={css`
+                height:100%;
+                display:grid;
+                grid-template-rows:auto 1fr;
+            `}
+        >
             <Layout nombre="Zona de control" />
-            <Scanner direccion={"/dashboard/HomeWorker/validate-boletos"} />
-            
-            <div hidden={true} >
-                <Scanner direccion={"/dashboard/HomeWorker/validate-boletos"} />
-                <div className="container-contorno-aviso">
-                    <Typography variant="h5" >¡Se ha escaneado la compra!</Typography>
-                    <Button variant="contained"  onClick={() => navigate("info")} >Ok</Button>
-                </div>
-            </div>
+            <Scanner direccion={"/dashboard/HomeWorker/validate-boletos/info"} />
+
         </div>
     )
 }

@@ -97,7 +97,7 @@ function HomeWorker() {
             border-radius: 0.5rem;
             align-items: center;
             align-self: stretch;
-            margin: 1rem min(5%,5rem);
+            margin: 1rem 3rem;
             color:white;
             margin-top:1.5rem;
             padding:2rem;
@@ -127,7 +127,7 @@ function HomeWorker() {
         <Button
           startIcon={<Food2 />}
           variant="contained"
-          onClick={() => navigate("Pedidos") }
+          onClick={() => navigate("/dashboard/HomeWorker/Pedidos/scanner") }
         >
             <Typography variant="buttontext" >Procesar Pedidos</Typography>
         </Button>

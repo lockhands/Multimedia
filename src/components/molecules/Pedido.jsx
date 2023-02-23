@@ -5,7 +5,7 @@ import { useNavigate } from 'react-router-dom'
 import pedidoPhoto from '../../assets/pedido.webp'
 
 
-function PedidoDesktop({ name = 'Tequeños' ,onPhone}) {
+function PedidoDesktop({name,onPhone,imgSource}) {
 
     const [seeMore,setSeeMore] = useState(false)
 
@@ -77,7 +77,7 @@ function PedidoDesktop({ name = 'Tequeños' ,onPhone}) {
                         width: 13rem;
                         border-radius: 0.5rem;
                     `}
-                    src={pedidoPhoto} 
+                    src={imgSource} 
                     alt="food-image"
                 /> 
 
@@ -95,7 +95,7 @@ function PedidoDesktop({ name = 'Tequeños' ,onPhone}) {
     )
 }
 
-function PedidoPhone({name = 'Tequeños',onPhone}) {
+function PedidoPhone({name = 'Tequeños',onPhone,imgSource}) {
 
     const navigate = useNavigate()
 
@@ -122,7 +122,7 @@ function PedidoPhone({name = 'Tequeños',onPhone}) {
                         width: 4.5rem;
                         border-radius: 0.5rem;
                     `}
-                    src={pedidoPhoto} 
+                    src={imgSource} 
                     alt="food-image"
                 />
                 <div
@@ -168,11 +168,11 @@ function PedidoPhone({name = 'Tequeños',onPhone}) {
     )
 }
 
-function Pedido({name = 'Tequeños',onPhone = false}) {
+function Pedido({name,onPhone = false,imgSource = pedidoPhoto}) {
   return (
     <>
-        <PedidoPhone  onPhone={onPhone} name={name} />
-        <PedidoDesktop onPhone={onPhone} name={name} />
+        <PedidoPhone  onPhone={onPhone} name={name} imgSource={imgSource} />
+        <PedidoDesktop onPhone={onPhone} name={name}  imgSource={imgSource} />
     </>
   )
 }
