@@ -1,9 +1,8 @@
 import React from "react";
 import '../../styles/tickets/estilos.css';
-import { Button, Typography } from "@mui/material";
+import { Typography } from "@mui/material";
 import ArrowBackIcon from '@mui/icons-material/ArrowBack';
-import { Link } from "react-router-dom";
-import { Box, css } from "@mui/system";
+import {  css } from "@mui/system";
 import Layout from "../../components/molecules/Layout";
 
 
@@ -17,7 +16,7 @@ function CodigoQRPedidos () {
                 background-color: #0E1321;
             `}
         >
-           <Layout onPhone={true} nombre="Pedidos" />
+           <Layout onPhone={true} nombre="Pedidos" link="/cliente/pedidos" />
             <div
                 css={css`
                     padding:2rem;

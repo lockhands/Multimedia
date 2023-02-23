@@ -7,18 +7,6 @@ function Layout({nombre,link,onPhone}) {
 
     const navigate = useNavigate()
 
-    const handleClick = () => {
-
-        console.log('xxxx')
-
-        if(! link ) {
-            console.log(link)
-            navigate('/')
-        } else {
-            navigate(-1)
-        }
-    }
-
     return(
         <div
             css={css` 
@@ -49,9 +37,15 @@ function Layout({nombre,link,onPhone}) {
             `}
 
         >
-            <Link onClick={ handleClick }>
-                <ArrowBackIcon />
-            </Link>
+            {
+                link ? 
+                <Link to={link}>
+                    <ArrowBackIcon  />
+                </Link> :
+                <Link onClick={() => navigate(-1) }>
+                    <ArrowBackIcon  />
+                </Link>
+            }
             <Typography variant="h5" >{nombre}</Typography>
         </div>
     )

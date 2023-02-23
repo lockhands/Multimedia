@@ -54,7 +54,7 @@ function PuestosCliente() {
 
             `}
         >
-           <Layout onPhone={true} nombre="Tickets" />
+           <Layout onPhone={true} nombre="Tickets" link="/cliente/tickets" />
 
 
 
