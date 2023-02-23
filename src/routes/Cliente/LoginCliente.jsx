@@ -1,11 +1,12 @@
 import { css } from '@emotion/react'
 import React from 'react'
 import Logo from '../../components/Logo'
-import { Box , Button, TextField } from '@mui/material';
+import { Box , Button, InputBase, TextField } from '@mui/material';
 import { styled } from '@mui/material/styles';
 import Typography from '@mui/material/Typography';
+import { createTheme } from "@mui/material/styles";
+import { ThemeProvider } from "@mui/material/styles";
 import { red, green, blue } from '@mui/material/colors';
-import { flexbox } from '@mui/system';
 import { useNavigate } from 'react-router-dom';
 
 const Root = styled('div')(({ theme }) => ({
@@ -17,8 +18,29 @@ const Root = styled('div')(({ theme }) => ({
   }));
 
 
-
-
+const theme = createTheme({
+    components: {
+      MuiTextField: {
+        styleOverrides: {
+          root: {
+            // this is styles for the new variants
+            "&.subvariant-hovered": {
+              "& fieldset": {
+                border: "2px solid white"
+              },
+              "& .MuiInputBase-input:hover + fieldset": {
+                border: `2px solid white`
+              },
+              "& .MuiInputBase-input:focus + fieldset": {
+                border: `2px solid white`
+              },
+              
+            }
+          }
+        }
+      }
+    }
+  });
 
 function LoginCliente() {
 
@@ -34,6 +56,7 @@ function LoginCliente() {
             justify-content:center;
             align-items:center;
             height:100vh;
+            background-color:#0E1321;
         `}
     >
         <form
@@ -50,21 +73,15 @@ function LoginCliente() {
                 align-items:center;
                 justify-content:center;
             `}>
-                <Logo></Logo>
+              
             </div>
 
 
            
        
-        <Root>
-       
-        <TextField label="Correo electronico" variant="outlined"></TextField>
-            <Box mb={2} ></Box>
-            <TextField  label="Contraseña" variant="outlined" />
-            <Box mb={2} ></Box>
-            <Button variant="contained" onClick={handleClick}> Iniciar Seccion</Button>
-            
-        </Root>
+            <ThemeProvider theme={theme}>
+      <TextField></TextField>
+    </ThemeProvider>
        
         </form> 
     </div>
