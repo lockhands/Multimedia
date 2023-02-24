@@ -3,8 +3,6 @@ import React from 'react'
 import Logo from '../../components/Logo'
 import { Box , Button, TextField } from '@mui/material';
 import { styled } from '@mui/material/styles';
-import Typography from '@mui/material/Typography';
-
 import { useNavigate } from 'react-router-dom';
 
 const Root = styled('div')(({ theme }) => ({
@@ -15,8 +13,38 @@ const Root = styled('div')(({ theme }) => ({
     justifyContent:'center',
 }));
 
+const In = styled('div')(({theme}) =>({
+    backgroundColor: "#1D2334",
+
+}))
 
 
+  
+  const CssTextField = styled(TextField)({
+    '& label.Mui-focused': {
+      color: '#C2C2C2',
+    },
+    '& label':{
+        color: '#C2C2C2',
+    },
+    '& .MuiInput-underline:after': {
+      borderBottomColor: '#C2C2C2',
+    },
+    '& .MuiOutlinedInput-root': {
+      '& fieldset': {
+        borderColor: '#C2C2C2',
+        color: '#C2C2C2',
+      },
+      '&:hover fieldset': {
+        borderColor: '#C2C2C2',
+      },
+      '&.Mui-focused fieldset': {
+        borderColor: '#C2C2C2',
+      },
+    },
+  });
+
+ 
 
 
 function LoginTrabajador() {
@@ -33,6 +61,7 @@ function LoginTrabajador() {
             justify-content:center;
             align-items:center;
             height:100vh;
+            background-color:#0E1321;
         `}
     >
         <form
@@ -48,19 +77,30 @@ function LoginTrabajador() {
                 display:flex;
                 align-items:center;
                 justify-content:center;
+                background-color:transparent;
             `}>
-                <Logo></Logo>
+                <Logo css={css`
+ 
+
+`
+
+                }></Logo>
             </div>
 
 
            
        
         <Root>
-            <TextField label="Correo electronico" variant="outlined"></TextField>
+        
+        <CssTextField xs={{backgroundColor: '#1D2334',}} label="Correo electrónico" id="custom-css-outlined-input" />
+
             <Box mb={2} ></Box>
-            <TextField  label="Contraseña" variant="outlined" />
+           
+           <CssTextField label="Contraseña" id="custom-css-outlined-input" />
+
             <Box mb={2} ></Box>
-            <Button variant="contained" onClick={handleClick}> Iniciar Seccion</Button>
+
+            <Button css={css`background-color:#395CEA; color:#ffff`}variant="contained" onClick={handleClick}> Iniciar Seccion</Button>
             
         </Root>
        
