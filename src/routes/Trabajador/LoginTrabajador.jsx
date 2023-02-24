@@ -6,6 +6,7 @@ import { styled } from '@mui/material/styles';
 import Typography from '@mui/material/Typography';
 
 import { useNavigate } from 'react-router-dom';
+import Input from '../../components/atoms/Input';
 
 const Root = styled('div')(({ theme }) => ({
     padding: theme.spacing(1),
@@ -28,44 +29,58 @@ function LoginTrabajador() {
 
   return (
     <div
+    css={css`
+        display:flex;
+        justify-content:center;
+        align-items:flex-start;
+        height:100vh;
+        background-color:#0E1321;
+
+        button {
+          font-size:1.1rem;
+        }
+
+      }
+    `}
+>
+    <form
         css={css`
+
             display:flex;
-            justify-content:center;
-            align-items:center;
-            height:100vh;
+            justify-content:flex-start;
+            flex-direction:column;
+            .text-field {
+              align-self:stretch;
+            }                
+            margin-top:5rem;
         `}
     >
-        <form
-            css={css`
-                width: 25rem;
-                display:flex;
-                flex-direction:column;
-                bottom:7rem;
-                position:relative;
-            `}
+
+    <Root>
+        <Logo />
+
+        <div
+          css={css`
+            margin-top: 2rem;
+            align-self:stretch;
+
+          `}
         >
-            <div css={css`
-                display:flex;
-                align-items:center;
-                justify-content:center;
-            `}>
-                <Logo></Logo>
-            </div>
+          <Input name="Correo Electronico" />
+          <Input type='password' name="Contraseña" />
+        </div>
 
-
-           
-       
-        <Root>
-            <TextField label="Correo electronico" variant="outlined"></TextField>
-            <Box mb={2} ></Box>
-            <TextField  label="Contraseña" variant="outlined" />
-            <Box mb={2} ></Box>
-            <Button variant="contained" onClick={handleClick}> Iniciar Seccion</Button>
-            
-        </Root>
-       
-        </form> 
-    </div>
+        <Button
+            css={css`
+              align-self:stretch; 
+            `}
+            variant="contained" onClick={handleClick}>
+            Iniciar Seccion
+          </Button>
+    </Root>
+   
+    </form> 
+</div>
   )
 }
 
