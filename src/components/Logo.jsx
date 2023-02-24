@@ -1,9 +1,5 @@
-import { css } from '@emotion/react'
-
-import logo from '../assets/logo.jpg'
-
-
 import React from 'react'
+import { css } from '@emotion/react'
 
 function Logo() {
   return (
@@ -11,19 +7,19 @@ function Logo() {
         css={css`
             display:flex;
             justify-content:center;
+            align-items:center;
             width:250px;
-            height:275px;
-            
+            background-color: #D9D9D9;
+            height:250px;
+            border-radius:1000px;
+          
+            h1 {
+              font-size:3rem;
+            }
+
         `}
     >
-            <img
-                css={css`
-                    object-position: cover;
-                    width:300px;
-                    height:300px;
-                `}
-                src={logo} alt="LOGO" 
-            />
+      <h1> Logo </h1>
     </div>
   )
 }
