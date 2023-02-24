@@ -1,6 +1,8 @@
 import React from 'react'
 import { css } from '@emotion/react'
 
+import Image from '../assets/logo-no-text.png'
+
 function Logo() {
   return (
     <div
@@ -12,14 +14,16 @@ function Logo() {
             background-color: #D9D9D9;
             height:250px;
             border-radius:1000px;
-          
-            h1 {
-              font-size:3rem;
-            }
+            margin-bottom: 2rem;
 
         `}
     >
-      <h1> Logo </h1>
+      <img
+        css={css`
+          width:270px;
+          height:270px;
+        `}
+        src={Image} alt="logo" />
     </div>
   )
 }
