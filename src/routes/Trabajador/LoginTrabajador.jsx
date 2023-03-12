@@ -35,17 +35,14 @@ function LoginTrabajador() {
         align-items:flex-start;
         height:100vh;
         background-color:#0E1321;
-
         button {
           font-size:1.1rem;
         }
-
       }
     `}
 >
     <form
         css={css`
-
             display:flex;
             justify-content:flex-start;
             flex-direction:column;
@@ -63,7 +60,6 @@ function LoginTrabajador() {
           css={css`
             margin-top: 2rem;
             align-self:stretch;
-
           `}
         >
           <Input name="Correo Electronico" />
